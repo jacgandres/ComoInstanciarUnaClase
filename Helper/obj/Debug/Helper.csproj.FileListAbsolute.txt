@@ -3,3 +3,27 @@ C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Debug\Helper.pdb
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.dll
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.pdb
+C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.pdb
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Helper.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Helper.pdb
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Helpers.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Razor.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Helpers.xml
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Razor.xml
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.xml
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Helper.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Helper.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.dll
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.pdb

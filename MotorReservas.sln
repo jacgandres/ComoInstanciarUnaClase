@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorReservas.Modelo", "MotorReservas.Modelo\MotorReservas.Modelo.csproj", "{7C42679A-9D88-426E-AB15-D2BF623907D1}"
 EndProject
@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorReservas.Web", "MotorR
 		{8096A0E5-784C-4C77-B146-22B8B0FC7BCB} = {8096A0E5-784C-4C77-B146-22B8B0FC7BCB}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "..\Asp.Net MVC Red Social\Helper\Helper.csproj", "{847670B3-4E55-403E-9758-964610374A0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{847670B3-4E55-403E-9758-964610374A0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

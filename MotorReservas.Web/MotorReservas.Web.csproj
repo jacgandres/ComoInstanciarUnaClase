@@ -208,7 +208,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Asp.Net MVC Red Social\Helper\Helper.csproj">
+    <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{847670b3-4e55-403e-9758-964610374a0c}</Project>
       <Name>Helper</Name>
     </ProjectReference>
