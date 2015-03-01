@@ -4,7 +4,7 @@ namespace MotorReservas.Modelo
     using System.Data.Entity.ModelConfiguration.Conventions;
     using MotorReservas.Entidad;
 
-    public partial class MotorReservasContexto : DbContext
+    public class MotorReservasContexto : DbContext
     {
         public MotorReservasContexto()
             : base("name=MotorReservasContexto")

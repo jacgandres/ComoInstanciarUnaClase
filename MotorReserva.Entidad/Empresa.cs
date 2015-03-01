@@ -4,11 +4,12 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("Empresa")]
     public class Empresa
     {
+        
         public Empresa()
         {
         }
@@ -50,8 +51,6 @@ namespace MotorReservas.Entidad
 
         [StringLength(100)]
         public string UrlImagen3 { get; set; }
-
-        public virtual Ciudad Ciudad { get; set; }
 
     }
 }

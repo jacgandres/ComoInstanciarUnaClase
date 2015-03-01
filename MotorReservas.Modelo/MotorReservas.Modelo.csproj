@@ -55,15 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CanalVentaModelo.cs" />
-    <Compile Include="InventarioModelo.cs" />
+    <Compile Include="Contexto\MotorReservasContexto.cs" />
+    <Compile Include="Modelo\CanalVentaModelo.cs" />
+    <Compile Include="Modelo\InventarioModelo.cs" />
     <Compile Include="ModeloAdministrativo\Modulo_Tiene_RolModelo.cs" />
     <Compile Include="ModeloAdministrativo\RolModelo.cs" />
     <Compile Include="ModeloAdministrativo\UsuarioModelo.cs" />
     <Compile Include="ModeloAdministrativo\Usuario_Tiene_RolModelo.cs" />
-    <Compile Include="MotorReservasContexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoReservaModelo.cs" />
+    <Compile Include="Modelo\TipoReservaModelo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,6 +75,7 @@
       <Name>MotorReserva.Entidad</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

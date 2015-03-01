@@ -4,9 +4,8 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    
 
-
-    [Table("Producto_Tiene_Reserva")]
     public class Producto_Tiene_Reserva
     {
         [Key]
@@ -18,8 +17,5 @@ namespace MotorReservas.Entidad
 
         public DateTime? FechaRegistro { get; set; }
 
-        public virtual Producto Producto { get; set; }
-
-        public virtual Reserva Reserva { get; set; }
     }
 }

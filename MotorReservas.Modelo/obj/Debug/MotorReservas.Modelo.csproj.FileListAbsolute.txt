@@ -9,3 +9,4 @@ C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlS
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.xml

@@ -4,11 +4,12 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("Reserva")]
     public class Reserva
     {
+        
         public Reserva()
         {
         }
@@ -23,19 +24,13 @@ namespace MotorReservas.Entidad
 
         public int IdDetalleReserva { get; set; }
 
-        public bool? Activo { get; set; }
+        public bool Activo  { get; set; }
 
-        public DateTime? FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public int IdCanalVenta { get; set; }
 
         public int IdTipoReserva { get; set; }
-
-        public virtual CanalVenta CanalVenta { get; set; }
-
-        public virtual DetalleReserva DetalleReserva { get; set; }
-
-        public virtual Empresa Empresa { get; set; }
 
     }
 }

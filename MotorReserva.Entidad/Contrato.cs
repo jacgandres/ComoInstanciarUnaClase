@@ -4,7 +4,7 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("Contrato")]
     public class Contrato
@@ -31,7 +31,6 @@ namespace MotorReservas.Entidad
         public bool Activo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
-
 
     }
 }

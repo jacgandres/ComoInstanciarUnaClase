@@ -2,18 +2,18 @@
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="Usuario">
     <xs:sequence>
-      <xs:element name="_x003C_Activo_x003E_k__BackingField" nillable="true" type="xs:boolean" />
-      <xs:element name="_x003C_Clave_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_Correo_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_Descripcion_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_FechaRegistro_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
-      <xs:element name="_x003C_FechaUltimoRegistro_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
-      <xs:element name="_x003C_IdEmpresa_x003E_k__BackingField" nillable="true" type="xs:int" />
-      <xs:element name="_x003C_IdUsuario_x003E_k__BackingField" type="xs:int" />
-      <xs:element name="_x003C_UrlImagen1_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_UrlImagen2_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_UrlImagen3_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_User_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaUltimoRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdEmpresa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="UrlImagen1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImagen2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImagen3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Usuario" nillable="true" type="tns:Usuario" />

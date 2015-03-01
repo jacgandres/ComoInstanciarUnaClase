@@ -15,7 +15,7 @@ namespace MotorReserva.Entidad.ProcedimientosAlmacenados
         [StringLength(100)]
         public string Nombre { get; set; }
 
-        public DateTime? FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public int? IdEmpresa { get; set; }
 

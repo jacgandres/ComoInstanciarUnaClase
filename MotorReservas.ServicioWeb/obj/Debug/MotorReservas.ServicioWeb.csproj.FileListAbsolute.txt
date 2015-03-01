@@ -11,3 +11,4 @@ C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\EntityFramework.SqlSe
 C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.dll
 C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\EntityFramework.xml

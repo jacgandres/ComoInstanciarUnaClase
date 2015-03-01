@@ -4,12 +4,12 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("Servicio")]
-    [Serializable]
     public class Servicio
     {
+        
         public Servicio()
         {
         }
@@ -22,7 +22,7 @@ namespace MotorReservas.Entidad
         [StringLength(100)]
         public string Nombre { get; set; }
 
-        public DateTime? FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         [StringLength(100)]
         public string UrlImagen1 { get; set; }

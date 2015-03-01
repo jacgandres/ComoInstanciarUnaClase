@@ -4,7 +4,7 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     public class FormaPago_Tiene_Reserva
     {
@@ -13,9 +13,9 @@ namespace MotorReservas.Entidad
 
         public int IdReserva { get; set; }
 
-        public bool? Activo { get; set; }
+        public bool Activo  { get; set; }
 
-        public DateTime? FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public int IdFormaDePago { get; set; }
 

@@ -4,11 +4,11 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
     
-    [Table("Pais")]
+
     public class Pais
     {
+        
         public Pais()
         {
         }
@@ -21,6 +21,6 @@ namespace MotorReservas.Entidad
         public string Nombre { get; set; }
 
         public DateTime FecheRegistro { get; set; }
-
+        
     }
 }

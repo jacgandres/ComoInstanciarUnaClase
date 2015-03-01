@@ -4,11 +4,12 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("FormaPago")]
     public class FormaPago
     {
+        
         public FormaPago()
         {
         }

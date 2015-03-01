@@ -4,7 +4,7 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-
+    
 
     [Table("Cliente")]
     public class Cliente
@@ -22,7 +22,6 @@ namespace MotorReservas.Entidad
 
         [Required]
         [StringLength(100)]
-        [EmailAddress]
         public string Email { get; set; }
 
         public int IdTipoIdentificacion { get; set; }
@@ -38,7 +37,6 @@ namespace MotorReservas.Entidad
         public bool Activo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
-
 
     }
 }
