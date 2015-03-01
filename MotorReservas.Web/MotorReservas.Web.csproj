@@ -113,6 +113,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Administracion\LoginController.cs" />
     <Compile Include="Controllers\Administracion\UsuarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,6 +181,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -193,6 +195,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Asp.Net MVC Red Social\Helper\Helper.csproj">
+      <Project>{847670b3-4e55-403e-9758-964610374a0c}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MotorReserva.Entidad\MotorReserva.Entidad.csproj">
       <Project>{7184f326-e725-4747-91be-4ef6ac2bf1b1}</Project>
       <Name>MotorReserva.Entidad</Name>

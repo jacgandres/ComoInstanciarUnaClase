@@ -1,0 +1,52 @@
+﻿@model MotorReservas.Entidad.Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Motor de Reservas</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <h1>Modulo de Inicio</h1>
+    </div>
+
+    <div class="container body-content">
+        <hr />
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                 <h2>Ingresar</h2>
+                @using (Html.BeginForm("Acceder", "Login", FormMethod.Post))
+                {
+                    <div class="form-group"></div>
+                    <label>Correo</label>
+                    @Html.ValidationMessageFor(model => model.Correo)
+                    @Html.TextBoxFor(model => model.Correo, new { @class = "form-control", placeholder = "Ingrese su correo", maxlength = 50 })
+
+                    <div class="form-group"></div>
+                    <label>Clave</label>
+                    @Html.ValidationMessageFor(model => model.Clave)
+                    @Html.PasswordFor(model => model.Clave, new { @class = "form-control", placeholder = "Ingrese su clave", maxlength = 10 })
+
+                    <br />
+                    <button type="submit" class="btn btn-default" data-ajax="true">Ingresar</button>
+                }
+            </div>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Motor de Reservas</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

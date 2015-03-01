@@ -26,3 +26,5 @@ C:\Desarrollos\MotorReservas\MotorReservas.Web\bin\Newtonsoft.Json.xml
 C:\Desarrollos\MotorReservas\MotorReservas.Web\obj\Debug\MotorReservas.Web.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\MotorReservas.Web\obj\Debug\MotorReservas.Web.dll
 C:\Desarrollos\MotorReservas\MotorReservas.Web\obj\Debug\MotorReservas.Web.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.Web\bin\Helper.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Web\bin\Helper.pdb

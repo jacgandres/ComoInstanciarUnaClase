@@ -1,0 +1,5 @@
+C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Release\Helper.dll
+C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Release\Helper.pdb
+C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.csprojResolveAssemblyReference.cache
+C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.dll
+C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.pdb
