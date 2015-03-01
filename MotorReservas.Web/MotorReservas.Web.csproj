@@ -113,6 +113,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ConstumeAttributes\CustomAttributes.cs" />
     <Compile Include="Controllers\Administracion\LoginController.cs" />
     <Compile Include="Controllers\Administracion\UsuarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -147,7 +148,18 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Tools\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\Tools\css\images\ajax-loader.GIF" />
+    <Content Include="Scripts\Tools\css\style.css" />
+    <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\Tools\js\datepicker\css\datepicker.css" />
+    <Content Include="Scripts\Tools\js\datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Scripts\Tools\js\ini.js" />
+    <Content Include="Scripts\Tools\js\jquery.form.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Service References\AdministraionService\Administracion.disco" />
     <None Include="Service References\AdministraionService\configuration91.svcinfo" />
     <None Include="Service References\AdministraionService\configuration.svcinfo" />
@@ -185,7 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
