@@ -1,0 +1,11 @@
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll.config
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
+C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb

@@ -1,0 +1,13 @@
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReservas.ServicioWeb.dll.config
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReservas.ServicioWeb.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReservas.ServicioWeb.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\EntityFramework.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\EntityFramework.SqlServer.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReservas.Modelo.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReserva.Entidad.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\MotorReservas.Modelo.pdb
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\bin\EntityFramework.SqlServer.xml
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ServicioWeb\obj\Debug\MotorReservas.ServicioWeb.pdb
