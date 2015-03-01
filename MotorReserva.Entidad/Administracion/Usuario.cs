@@ -23,7 +23,7 @@ namespace MotorReservas.Entidad
         public string User { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(50)]
         public string Clave { get; set; }
 
         [Required]
@@ -50,8 +50,12 @@ namespace MotorReservas.Entidad
         [StringLength(100)]
         public string Descripcion { get; set; }
 
-        public DateTime FechaUltimoRegistro { get; set; }
+        public DateTime? FechaUltimoRegistro { get; set; }
 
+        [StringLength(50)]
+        public string Nombre { get; set; }
 
+        [StringLength(50)]
+        public string Apellido { get; set; }
     }
 }

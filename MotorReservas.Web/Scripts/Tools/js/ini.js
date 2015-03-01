@@ -69,6 +69,7 @@ $(document).ready(function () {
                 }
                 // Redireccionar
                 if (r.href != null) {
+                     
                     if (r.href == 'self') window.location.reload(true);
                     else redirect(r.href);
                 }
@@ -116,3 +117,5 @@ jQuery.fn.reset = function () {
     $("input:checkbox:checked", $(this)).click();
     $("select", $(this)).val(0);
 };
+
+

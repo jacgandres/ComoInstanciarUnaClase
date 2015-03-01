@@ -19,6 +19,24 @@
   <wsdl:message name="IAdministracion_ListarUsuarios_OutputMessage">
     <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IniciarSesionUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IniciarSesionUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAdministracion">
     <wsdl:operation name="RegistrarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarUsuario" message="tns:IAdministracion_RegistrarUsuario_InputMessage" />
@@ -27,6 +45,18 @@
     <wsdl:operation name="ListarUsuarios">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ListarUsuarios" message="tns:IAdministracion_ListarUsuarios_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ListarUsuariosResponse" message="tns:IAdministracion_ListarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ActualizarUsuario" message="tns:IAdministracion_ActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ActualizarUsuarioResponse" message="tns:IAdministracion_ActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuario" message="tns:IAdministracion_EliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuarioResponse" message="tns:IAdministracion_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesionUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario" message="tns:IAdministracion_IniciarSesionUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse" message="tns:IAdministracion_IniciarSesionUsuario_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Administracion" type="tns:IAdministracion">
@@ -42,6 +72,33 @@
     </wsdl:operation>
     <wsdl:operation name="ListarUsuarios">
       <soap:operation soapAction="http://tempuri.org/IAdministracion/ListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesionUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/IniciarSesionUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

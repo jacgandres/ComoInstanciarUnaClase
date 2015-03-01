@@ -67,6 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="Administracion\Rol.cs" />
+    <Compile Include="ResponseModel.cs" />
     <Compile Include="Sede.cs" />
     <Compile Include="Servicio.cs" />
     <Compile Include="Servicio_Tiene_Reserva.cs" />

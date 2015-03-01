@@ -26,6 +26,24 @@ namespace MotorReservas.Web.AdministraionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ListarUsuarios", ReplyAction="http://tempuri.org/IAdministracion/ListarUsuariosResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Usuario>> ListarUsuariosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ActualizarUsuario", ReplyAction="http://tempuri.org/IAdministracion/ActualizarUsuarioResponse")]
+        bool ActualizarUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ActualizarUsuario", ReplyAction="http://tempuri.org/IAdministracion/ActualizarUsuarioResponse")]
+        System.Threading.Tasks.Task<bool> ActualizarUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/EliminarUsuario", ReplyAction="http://tempuri.org/IAdministracion/EliminarUsuarioResponse")]
+        bool EliminarUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/EliminarUsuario", ReplyAction="http://tempuri.org/IAdministracion/EliminarUsuarioResponse")]
+        System.Threading.Tasks.Task<bool> EliminarUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
+        MotorReservas.Entidad.Usuario IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
+        System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +87,30 @@ namespace MotorReservas.Web.AdministraionService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Usuario>> ListarUsuariosAsync() {
             return base.Channel.ListarUsuariosAsync();
+        }
+        
+        public bool ActualizarUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ActualizarUsuario(pUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ActualizarUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ActualizarUsuarioAsync(pUsuario);
+        }
+        
+        public bool EliminarUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.EliminarUsuario(pUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EliminarUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.EliminarUsuarioAsync(pUsuario);
+        }
+        
+        public MotorReservas.Entidad.Usuario IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.IniciarSesionUsuario(pUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.IniciarSesionUsuarioAsync(pUsuario);
         }
     }
 }

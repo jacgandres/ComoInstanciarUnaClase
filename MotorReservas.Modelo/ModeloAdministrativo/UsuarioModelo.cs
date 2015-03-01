@@ -36,7 +36,7 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
                                         orderby cntx.User
                                         select cntx;
 
-                    return listaUsuarios.ToList();               
+                    return listaUsuarios.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -89,9 +89,13 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
                                          && usr.Clave == pUsuario.Clave
                                          select usr;
                     Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
-
+                    if (respuestaUI != null)
+                    {
+                        respuestaUI.FechaUltimoRegistro = DateTime.Now;
+                        ActualizarUsuario(respuestaUI);
+                    }
                     return respuestaUI;
-                   
+
                 }
                 catch (Exception ex)
                 {
