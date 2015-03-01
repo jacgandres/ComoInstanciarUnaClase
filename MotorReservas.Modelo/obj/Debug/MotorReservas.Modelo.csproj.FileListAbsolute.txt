@@ -10,3 +10,15 @@ C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb
 C:\Desarrollos\MotorReservas\MotorReservas.Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll.config
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.pdb
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.dll
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.pdb
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
+C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb

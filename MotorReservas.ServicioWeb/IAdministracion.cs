@@ -16,5 +16,11 @@ namespace MotorReservas.ServicioWeb
         bool RegistrarUsuario(Usuario pUsuario);
         [OperationContract]
         List<Usuario> ListarUsuarios();
+        [OperationContract]
+        bool ActualizarUsuario(Usuario pUsuario);
+        [OperationContract]
+        bool EliminarUsuario(Usuario pUsuario);
+        [OperationContract]
+        Usuario IniciarSesionUsuario(Usuario pUsuario);
     }
 }

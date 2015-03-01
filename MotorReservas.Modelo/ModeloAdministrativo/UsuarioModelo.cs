@@ -45,6 +45,59 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
             }
         }
 
+        public static bool ActualizarUsuario(Usuario pUsuario)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    var User = contexto.Entry(pUsuario);
+                    User.State = System.Data.Entity.EntityState.Modified;
+                    return contexto.SaveChanges() > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
 
+        public static bool EliminarUsuario(Usuario pUsuario)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    contexto.Usuario.Remove(pUsuario);
+                    return contexto.SaveChanges() > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static Usuario IniciarSesionUsuario(Usuario pUsuario)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    var usuarioLogeado = from usr in contexto.Usuario
+                                         where usr.Correo == pUsuario.Correo
+                                         && usr.Clave == pUsuario.Clave
+                                         select usr;
+                    Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
+
+                    return respuestaUI;
+                   
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }
