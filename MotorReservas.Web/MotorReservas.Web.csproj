@@ -194,8 +194,8 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Rol\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
