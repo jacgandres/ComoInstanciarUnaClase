@@ -34,7 +34,7 @@ namespace MotorReservas.Web.ConstumeAttributes
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {
-                    controller = "Inicio",
+                    controller = "home",
                     action = "Index"
                 }));
             }

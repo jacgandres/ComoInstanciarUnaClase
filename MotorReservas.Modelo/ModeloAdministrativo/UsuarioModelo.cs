@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MotorReservas.Entidad;
 
 
-namespace MotorReservas.Modelo.ModeloAdministrativo
+namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
 {
     public class UsuarioModelo
     {
@@ -84,27 +84,20 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
             {
                 try
                 {
-                    List<object> respuesta = new List<object>();
-
                     var usuarioLogeado = from usr in contexto.Usuario
                                          where usr.Correo == pUsuario.Correo
                                          && usr.Clave == pUsuario.Clave
                                          select usr;
+
                     Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
+
                     if (respuestaUI != null)
                     {
                         respuestaUI.FechaUltimoRegistro = DateTime.Now;
                         ActualizarUsuario(respuestaUI);
-                        respuesta.Add(respuestaUI);
-
-                        List<Modulo> modulos = ModuloModelo.ObtenerModulosRolesPorUsuario(respuestaUI.IdUsuario);
-
-                        if(modulos != null && modulos.Count > 0)
-                        {
-                            respuesta.Add(modulos);
-                        }
                     }
-                    return respuesta;
+                     
+                    return respuestaUI;
 
                 }
                 catch (Exception ex)

@@ -1,4 +1,4 @@
-namespace MotorReservas.Modelo
+namespace MotorReservas.ModeloAdministrativo
 {
     using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration.Conventions;

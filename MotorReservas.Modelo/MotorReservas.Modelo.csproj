@@ -7,7 +7,7 @@
     <ProjectGuid>{7C42679A-9D88-426E-AB15-D2BF623907D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MotorReservas.Modelo</RootNamespace>
+    <RootNamespace>MotorReservas.ModeloAdministrativo</RootNamespace>
     <AssemblyName>MotorReservas.Modelo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -62,7 +62,7 @@
     <Compile Include="ModeloAdministrativo\RolModelo.cs" />
     <Compile Include="ModeloAdministrativo\UsuarioModelo.cs" />
     <Compile Include="ModeloAdministrativo\Usuario_Tiene_RolModelo.cs" />
-    <Compile Include="Modelo\ModuloModelo.cs" />
+    <Compile Include="ModeloAdministrativo\ModuloModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Modelo\TipoReservaModelo.cs" />
   </ItemGroup>
