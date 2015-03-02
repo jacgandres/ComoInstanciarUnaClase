@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" />
-      <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAdministracion_RegistrarUsuario_InputMessage">
@@ -32,11 +31,29 @@
   <wsdl:message name="IAdministracion_EliminarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosRolPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosRolPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosRolPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosRolPorUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdministracion_IniciarSesionUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:IniciarSesionUsuario" />
   </wsdl:message>
   <wsdl:message name="IAdministracion_IniciarSesionUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:IniciarSesionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerUsuarioPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerUsuarioPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasResponse" />
   </wsdl:message>
   <wsdl:message name="IAdministracion_ListarRoles_InputMessage">
     <wsdl:part name="parameters" element="tns:ListarRoles" />
@@ -67,9 +84,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuario" message="tns:IAdministracion_EliminarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuarioResponse" message="tns:IAdministracion_EliminarUsuario_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosRolPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario" message="tns:IAdministracion_ObtenerModulosRolPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuarioResponse" message="tns:IAdministracion_ObtenerModulosRolPorUsuario_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="IniciarSesionUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario" message="tns:IAdministracion_IniciarSesionUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse" message="tns:IAdministracion_IniciarSesionUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId" message="tns:IAdministracion_ObtenerUsuarioPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorIdResponse" message="tns:IAdministracion_ObtenerUsuarioPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresas" message="tns:IAdministracion_ObtenerEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresasResponse" message="tns:IAdministracion_ObtenerEmpresas_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ListarRoles">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ListarRoles" message="tns:IAdministracion_ListarRoles_InputMessage" />
@@ -118,8 +147,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosRolPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="IniciarSesionUsuario">
       <soap:operation soapAction="http://tempuri.org/IAdministracion/IniciarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorId">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresas">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerEmpresas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

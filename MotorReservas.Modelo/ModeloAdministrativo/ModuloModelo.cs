@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MotorReservas.Entidad;
-
 
 namespace MotorReservas.ModeloAdministrativo
 {
@@ -16,7 +16,8 @@ namespace MotorReservas.ModeloAdministrativo
             {
                 try
                 {
-                    var lstModulos = contexto.Database.SqlQuery<Modulo>("ObtenerModulosRolesPorUsuario @IdUsuario", intUsuario);
+                    var lstModulos = contexto.Database.SqlQuery<Modulo>("ObtenerModulosRolesPorUsuario @IdUsuario",
+                        new SqlParameter("IdUsuario", intUsuario));
 
                     List<Modulo> resModulos = (from mod in lstModulos
                                                orderby mod.IdModulo
@@ -26,7 +27,6 @@ namespace MotorReservas.ModeloAdministrativo
                 }
                 catch (Exception ex)
                 {
-                    
                     throw ex;
                 }
                 

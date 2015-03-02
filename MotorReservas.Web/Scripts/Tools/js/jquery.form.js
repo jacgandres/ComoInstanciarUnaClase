@@ -189,19 +189,25 @@
 
         // options.iframe allows user to force iframe mode
         // 06-NOV-09: now defaulting to iframe mode if file input is detected
+        
         if (options.iframe !== false && (options.iframe || shouldUseFrame)) {
             // hack to fix Safari hang (thanks to Tim Molendijk for this)
             // see:  http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
             if (options.closeKeepAlive) {
                 $.get(options.closeKeepAlive, function () {
+
+                    
                     jqxhr = fileUploadIframe(a);
                 });
             }
             else {
+
+               
                 jqxhr = fileUploadIframe(a);
             }
         }
         else if ((hasFileInputs || multipart) && fileAPI) {
+            
             jqxhr = fileUploadXhr(a);
         }
         else {
@@ -289,6 +295,7 @@
 
         // private function for handling file uploads (hat tip to YAHOO!)
         function fileUploadIframe(a) {
+            debugger;
             var form = $form[0], el, i, s, g, id, $io, io, xhr, sub, n, timedOut, timeoutHandle;
             var useProp = !!$.fn.prop;
             var deferred = $.Deferred();

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" />
-  <xs:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="RegistrarUsuario">
     <xs:complexType>
       <xs:sequence>
@@ -56,17 +55,57 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="IniciarSesionUsuario">
+  <xs:element name="ObtenerModulosRolPorUsuario">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuario" nillable="true" type="q5:Usuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ObtenerModulosRolPorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerModulosRolPorUsuarioResult" nillable="true" type="q6:ArrayOfModulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarSesionUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuario" nillable="true" type="q7:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="IniciarSesionUsuarioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IniciarSesionUsuarioResult" nillable="true" type="q6:ArrayOfanyType" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="IniciarSesionUsuarioResult" nillable="true" type="q8:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuario" nillable="true" type="q9:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerUsuarioPorIdResult" nillable="true" type="q10:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerEmpresasResult" nillable="true" type="q11:ArrayOfEmpresa" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -78,14 +117,14 @@
   <xs:element name="ListarRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ListarRolesResult" nillable="true" type="q7:ArrayOfRol" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ListarRolesResult" nillable="true" type="q12:ArrayOfRol" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Insertar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pRol" nillable="true" type="q8:Rol" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pRol" nillable="true" type="q13:Rol" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

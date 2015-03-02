@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Helper;
+using MotorReservas.Entidad;
 
 namespace MotorReservas.Web.ConstumeAttributes
 {
@@ -32,6 +33,13 @@ namespace MotorReservas.Web.ConstumeAttributes
 
             if (SessionHelper.ExistUserInSession())
             {
+                if (HttpContext.Current.Session["Roles"] == null)
+                {
+                    AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient();
+                    Usuario usr = new Usuario();
+                    usr.IdUsuario = SessionHelper.GetUser();
+                    HttpContext.Current.Session["Roles"] = servicio.ObtenerModulosRolPorUsuario(usr);
+                }
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {
                     controller = "home",

@@ -53,6 +53,7 @@
     <Compile Include="DetalleReserva.cs" />
     <Compile Include="Diccionario.cs" />
     <Compile Include="Empresa.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="EstadoContrato.cs" />
     <Compile Include="FormaPago.cs" />
     <Compile Include="FormaPago_Tiene_Reserva.cs" />

@@ -39,16 +39,29 @@ namespace MotorReservas.Web.AdministraionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/EliminarUsuario", ReplyAction="http://tempuri.org/IAdministracion/EliminarUsuarioResponse")]
         System.Threading.Tasks.Task<bool> EliminarUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MotorReservas.Entidad.Usuario))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<MotorReservas.Entidad.Usuario>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<MotorReservas.Entidad.Rol>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MotorReservas.Entidad.Rol))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<object>))]
-        System.Collections.Generic.List<object> IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario", ReplyAction="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuarioResponse")]
+        System.Collections.Generic.List<MotorReservas.Entidad.Modulo> ObtenerModulosRolPorUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario", ReplyAction="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuarioResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Modulo>> ObtenerModulosRolPorUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<object>> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        MotorReservas.Entidad.Usuario IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
+        System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId", ReplyAction="http://tempuri.org/IAdministracion/ObtenerUsuarioPorIdResponse")]
+        MotorReservas.Entidad.Usuario ObtenerUsuarioPorId(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId", ReplyAction="http://tempuri.org/IAdministracion/ObtenerUsuarioPorIdResponse")]
+        System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> ObtenerUsuarioPorIdAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerEmpresas", ReplyAction="http://tempuri.org/IAdministracion/ObtenerEmpresasResponse")]
+        System.Collections.Generic.List<MotorReservas.Entidad.Empresa> ObtenerEmpresas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerEmpresas", ReplyAction="http://tempuri.org/IAdministracion/ObtenerEmpresasResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Empresa>> ObtenerEmpresasAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ListarRoles", ReplyAction="http://tempuri.org/IAdministracion/ListarRolesResponse")]
         System.Collections.Generic.List<MotorReservas.Entidad.Rol> ListarRoles();
@@ -122,12 +135,36 @@ namespace MotorReservas.Web.AdministraionService {
             return base.Channel.EliminarUsuarioAsync(pUsuario);
         }
         
-        public System.Collections.Generic.List<object> IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+        public System.Collections.Generic.List<MotorReservas.Entidad.Modulo> ObtenerModulosRolPorUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerModulosRolPorUsuario(pUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Modulo>> ObtenerModulosRolPorUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerModulosRolPorUsuarioAsync(pUsuario);
+        }
+        
+        public MotorReservas.Entidad.Usuario IniciarSesionUsuario(MotorReservas.Entidad.Usuario pUsuario) {
             return base.Channel.IniciarSesionUsuario(pUsuario);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<object>> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+        public System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
             return base.Channel.IniciarSesionUsuarioAsync(pUsuario);
+        }
+        
+        public MotorReservas.Entidad.Usuario ObtenerUsuarioPorId(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerUsuarioPorId(pUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> ObtenerUsuarioPorIdAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerUsuarioPorIdAsync(pUsuario);
+        }
+        
+        public System.Collections.Generic.List<MotorReservas.Entidad.Empresa> ObtenerEmpresas() {
+            return base.Channel.ObtenerEmpresas();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Empresa>> ObtenerEmpresasAsync() {
+            return base.Channel.ObtenerEmpresasAsync();
         }
         
         public System.Collections.Generic.List<MotorReservas.Entidad.Rol> ListarRoles() {

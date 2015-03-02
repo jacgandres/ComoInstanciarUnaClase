@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using MotorReservas.Entidad;
+using MotorReservas.ModeloAdministrativo;
 using MotorReservas.ModeloAdministrativo.ModeloAdministrativo;
 
 namespace MotorReservas.ServicioWeb
@@ -33,9 +34,24 @@ namespace MotorReservas.ServicioWeb
             return UsuarioModelo.EliminarUsuario(pUsuario);
         }
 
-        public List<object> IniciarSesionUsuario(Usuario pUsuario)
+        public Usuario IniciarSesionUsuario(Usuario pUsuario)
         {
             return UsuarioModelo.IniciarSesionUsuario(pUsuario);
+        }
+
+        public Usuario ObtenerUsuarioPorId(Usuario pUsuario)
+        {
+            return UsuarioModelo.ObtenerUsuarioPorId(pUsuario);
+        }
+
+        public List<Empresa> ObtenerEmpresas()
+        {
+            return UsuarioModelo.ObtenerEmpresas();
+        }
+
+        public List<Modulo> ObtenerModulosRolPorUsuario(Usuario pUsuario)
+        {
+            return ModuloModelo.ObtenerModulosRolesPorUsuario(pUsuario.IdUsuario);
         }
 
         public bool Insertar(Rol pRol)

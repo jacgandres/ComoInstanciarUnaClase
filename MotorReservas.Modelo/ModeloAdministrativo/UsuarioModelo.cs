@@ -33,7 +33,7 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 try
                 {
                     var listaUsuarios = from cntx in contexto.Usuario
-                                        orderby cntx.User
+                                        orderby cntx.Nombre
                                         select cntx;
 
                     return listaUsuarios.ToList();
@@ -78,7 +78,7 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
             }
         }
 
-        public static List<object> IniciarSesionUsuario(Usuario pUsuario)
+        public static Usuario IniciarSesionUsuario(Usuario pUsuario)
         {
             using (MotorReservasContexto contexto = new MotorReservasContexto())
             {
@@ -90,22 +90,55 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                                          select usr;
 
                     Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
-                    List<object> respuesta = new List<object>();
 
                     if (respuestaUI != null)
                     {
                         respuestaUI.FechaUltimoRegistro = DateTime.Now;
                         ActualizarUsuario(respuestaUI);
-                        respuesta.Add(respuestaUI);
 
-                        List<Modulo> modulos = ModuloModelo.ObtenerModulosRolesPorUsuario(respuestaUI.IdUsuario);
-
-                        if (modulos != null && modulos.Count > 0)
-                            respuesta.Add(modulos);
                     }
 
-                    return respuesta;
+                    return respuestaUI;
 
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static Usuario ObtenerUsuarioPorId(Usuario pUsuario)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    var listaUsuario = from cntx in contexto.Usuario
+                                       where cntx.IdUsuario == pUsuario.IdUsuario
+                                       select cntx;
+
+                    return listaUsuario.FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public static List<Empresa> ObtenerEmpresas()
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    var listaEmpresas = from cntx in contexto.Empresa
+                                       orderby cntx.Nombre
+                                       where cntx.Activo ==true
+                                       select cntx;
+
+                    return listaEmpresas.ToList();
                 }
                 catch (Exception ex)
                 {

@@ -4,23 +4,19 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    
+
 
     [Table("Usuario")]
+    [Serializable]
     public class Usuario
     {
-        
+
         public Usuario()
         {
         }
 
         [Key]
         public int IdUsuario { get; set; }
-
-        [Column("Usuario")]
-        [Required]
-        [StringLength(50)]
-        public string User { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -35,9 +31,11 @@ namespace MotorReservas.Entidad
 
         public DateTime FechaRegistro { get; set; }
 
+        [Display(Name = "Empresa")]
         public int? IdEmpresa { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Imagen")]
         public string UrlImagen1 { get; set; }
 
         [StringLength(100)]
@@ -52,7 +50,9 @@ namespace MotorReservas.Entidad
 
         public DateTime? FechaUltimoRegistro { get; set; }
 
+        [Column("Nombre")]
         [StringLength(50)]
+        
         public string Nombre { get; set; }
 
         [StringLength(50)]

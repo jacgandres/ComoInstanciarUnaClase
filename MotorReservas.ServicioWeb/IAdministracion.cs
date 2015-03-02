@@ -14,17 +14,31 @@ namespace MotorReservas.ServicioWeb
     { 
         [OperationContract]
         bool RegistrarUsuario(Usuario pUsuario);
+        
         [OperationContract]
         List<Usuario> ListarUsuarios();
+        
         [OperationContract]
         bool ActualizarUsuario(Usuario pUsuario);
+        
         [OperationContract]
         bool EliminarUsuario(Usuario pUsuario);
 
         [OperationContract]
-        List<object> IniciarSesionUsuario(Usuario pUsuario);
+        List<Modulo> ObtenerModulosRolPorUsuario(Usuario pUsuario);
+
+        [OperationContract]
+        Usuario IniciarSesionUsuario(Usuario pUsuario);
+
+        [OperationContract]
+        Usuario ObtenerUsuarioPorId(Usuario pUsuario);
+
+        [OperationContract]
+        List<Empresa> ObtenerEmpresas();
+
         [OperationContract]
         List<Rol> ListarRoles();
+        
         [OperationContract]
         bool Insertar(Rol pRol);
     }

@@ -7,6 +7,7 @@ namespace MotorReservas.Entidad
     
 
     [Table("Modulo")]
+    [Serializable]
     public class Modulo
     {
         

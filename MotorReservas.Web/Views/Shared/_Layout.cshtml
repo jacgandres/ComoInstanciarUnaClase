@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    List<MotorReservas.Entidad.Modulo> modulos = (List<MotorReservas.Entidad.Modulo>)Session["Roles"];
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,7 +16,7 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/Tools/js/jquery.form.js"></script>
     <script src="~/Scripts/Tools/js/ini.js"></script>
-    <script type="text/javascript" >
+    <script type="text/javascript">
         function base_url(url) {
             return '@(Url.Content("~/"))' + url;
         }
@@ -39,20 +42,27 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Salir de Sesion", "logout", "Usuario")</li>
-                    <li>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modulo Administrativo<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="~/rol/index">Roles</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="~/usuario/index">Usuarios</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    @if (modulos!=null && modulos.Exists(mod => mod.IdModulo == (int)MotorReserva.Entidad.ENUMERACION_MODULOS.Administrativo) == true)
+                    {
+                        <li>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modulo Administrativo<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="~/rol/index">Roles</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="~/usuario/index">Usuarios</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="~/rol/AsignarRolesUsuario">Asignar Roles a Usuario</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="~/usuario/AsignarModulosRol">Asignar Modulos a Rol</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

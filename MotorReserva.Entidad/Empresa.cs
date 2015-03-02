@@ -4,12 +4,12 @@ namespace MotorReservas.Entidad
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    
+
 
     [Table("Empresa")]
     public class Empresa
     {
-        
+
         public Empresa()
         {
         }
@@ -23,11 +23,12 @@ namespace MotorReservas.Entidad
 
         [Required]
         [StringLength(100)]
+        [Display(Name = "Empresa")]
         public string Nombre { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Apellido { get; set; }
+        public string Identificacion { get; set; }
 
         [StringLength(15)]
         public string Telefono { get; set; }
