@@ -163,6 +163,9 @@
     <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\Tools\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Service References\AdministraionService\Administracion.disco" />
+    <None Include="Service References\AdministraionService\Administracion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\AdministraionService\configuration91.svcinfo" />
     <None Include="Service References\AdministraionService\configuration.svcinfo" />
     <None Include="Service References\AdministraionService\Reference.svcmap">

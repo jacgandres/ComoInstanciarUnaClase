@@ -27,3 +27,8 @@ C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.dll
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Helper.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Helper.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\obj\Debug\Helper.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\obj\Debug\Helper.pdb

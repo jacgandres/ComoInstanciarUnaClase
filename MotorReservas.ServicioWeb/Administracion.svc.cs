@@ -33,12 +33,10 @@ namespace MotorReservas.ServicioWeb
             return UsuarioModelo.EliminarUsuario(pUsuario);
         }
 
-        public Usuario IniciarSesionUsuario(Usuario pUsuario)
+        public List<object> IniciarSesionUsuario(Usuario pUsuario)
         {
             return UsuarioModelo.IniciarSesionUsuario(pUsuario);
         }
-
-
 
         public bool Insertar(Rol pRol)
         {

@@ -22,7 +22,7 @@ namespace MotorReservas.ServicioWeb
         bool EliminarUsuario(Usuario pUsuario);
 
         [OperationContract]
-        Usuario IniciarSesionUsuario(Usuario pUsuario);
+        List<object> IniciarSesionUsuario(Usuario pUsuario);
         [OperationContract]
         List<Rol> ListarRoles();
         [OperationContract]

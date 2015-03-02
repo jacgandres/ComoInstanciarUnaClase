@@ -26,7 +26,8 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult Logout()
         {
-            SessionHelper.DestroyUserSession();
+            SessionHelper.DestroyUserSession(); 
+            Session.Remove("Roles");
             return Redirect("~");
         }
     }

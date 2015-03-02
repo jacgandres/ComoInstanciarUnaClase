@@ -22,3 +22,15 @@ C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\bin\Debug\EntityFramew
 C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
 C:\Users\Jeca\Documents\MotorReserva\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll.config
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\MotorReservas.Modelo.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\EntityFramework.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\MotorReserva.Entidad.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\EntityFramework.xml
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReservas.Modelo\obj\Debug\MotorReservas.Modelo.pdb

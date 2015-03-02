@@ -26,11 +26,12 @@
     <MetadataSource Address="http://localhost:49541/Administracion.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Administracion.xsd" MetadataType="Schema" ID="4f656042-62a0-4863-b112-3e8dba150d8a" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd2" />
-    <MetadataFile FileName="Administracion.wsdl" MetadataType="Wsdl" ID="41f5344b-2e58-4ee2-8219-586230b09252" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?wsdl" />
-    <MetadataFile FileName="Administracion.disco" MetadataType="Disco" ID="2aab2512-8f83-4730-a1aa-f8cb375103ef" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?disco" />
     <MetadataFile FileName="Administracion1.xsd" MetadataType="Schema" ID="6c9df66c-8656-49b6-8058-e2eb61dea214" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd0" />
     <MetadataFile FileName="Administracion2.xsd" MetadataType="Schema" ID="e3307c9d-4e4c-4cf1-9eb5-2dccfc74b309" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd1" />
+    <MetadataFile FileName="Administracion.xsd" MetadataType="Schema" ID="4f656042-62a0-4863-b112-3e8dba150d8a" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd2" />
+    <MetadataFile FileName="Administracion3.xsd" MetadataType="Schema" ID="5bfb226b-775c-45a2-a833-20f6b64969ed" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd3" />
+    <MetadataFile FileName="Administracion.disco" MetadataType="Disco" ID="2aab2512-8f83-4730-a1aa-f8cb375103ef" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?disco" />
+    <MetadataFile FileName="Administracion.wsdl" MetadataType="Wsdl" ID="41f5344b-2e58-4ee2-8219-586230b09252" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

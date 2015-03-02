@@ -6,3 +6,7 @@ C:\Users\Jeca\Documents\MotorReserva\MotorReserva.Entidad\bin\Debug\MotorReserva
 C:\Users\Jeca\Documents\MotorReserva\MotorReserva.Entidad\bin\Debug\MotorReserva.Entidad.pdb
 C:\Users\Jeca\Documents\MotorReserva\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.dll
 C:\Users\Jeca\Documents\MotorReserva\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReserva.Entidad\bin\Debug\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReserva.Entidad\bin\Debug\MotorReserva.Entidad.pdb
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.pdb

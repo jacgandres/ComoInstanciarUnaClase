@@ -23,23 +23,24 @@ namespace MotorReservas.Web.Controllers.Administracion
         public JsonResult Acceder(string Correo, string Clave)
         {
             AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient();
-            Usuario pUsuario = new Usuario();
-            Usuario modelo = null;
+            Usuario pUsuario = new Usuario(); 
             if (ModelState.IsValid)
             {
                 Clave = Helper.HashHelper.MD5(Clave);
                 pUsuario.Clave = Clave;
                 pUsuario.Correo = Correo;
-                modelo = servicio.IniciarSesionUsuario(pUsuario);
-                if (modelo == null)
+                List<object> wbResult = servicio.IniciarSesionUsuario(pUsuario);
+                if (wbResult.Count < 1)
                     return Json(new { response = false, message = "El Correo o Clave tienen algun dato invalido." });
                 else
-                {
-                    Helper.SessionHelper.AddUserToSession(modelo.IdUsuario.ToString());
+                { 
+                    Helper.SessionHelper.AddUserToSession(((Usuario)wbResult[0]).IdUsuario.ToString());
 
                     ResponseModel mResponse = new ResponseModel();
                     mResponse.SetResponse(true);
                     mResponse.href = "home";
+
+                    Session["Roles"] = wbResult[1];
 
                     return Json(mResponse);
                 }
