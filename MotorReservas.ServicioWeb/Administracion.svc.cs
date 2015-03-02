@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using MotorReservas.Entidad;
-using MotorReservas.Modelo.ModeloAdministrativo;
+using MotorReservas.ModeloAdministrativo.ModeloAdministrativo;
 
 namespace MotorReservas.ServicioWeb
 {

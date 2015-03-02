@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MotorReservas.Modelo.ModeloAdministrativo
+namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
 {
     class Modulo_Tiene_RolModelo
     {

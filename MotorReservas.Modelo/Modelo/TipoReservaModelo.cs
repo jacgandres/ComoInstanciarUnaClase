@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MotorReservas.Entidad;
 
-namespace MotorReservas.Modelo
+namespace MotorReservas.ModeloAdministrativo
 {
     public class TipoReservaModelo
     {

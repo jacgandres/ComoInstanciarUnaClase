@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MotorReservas.Entidad;
 
 
-namespace MotorReservas.Modelo.ModeloAdministrativo
+namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
 {
     public class UsuarioModelo
     {
