@@ -38,6 +38,8 @@ namespace MotorReservas.ServicioWeb
             return UsuarioModelo.IniciarSesionUsuario(pUsuario);
         }
 
+
+
         public bool Insertar(Rol pRol)
         {
             return RolModelo.Insertar(pRol);
