@@ -78,12 +78,14 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
             }
         }
 
-        public static Usuario IniciarSesionUsuario(Usuario pUsuario)
+        public static List<object> IniciarSesionUsuario(Usuario pUsuario)
         {
             using (MotorReservasContexto contexto = new MotorReservasContexto())
             {
                 try
                 {
+                    List<object> respuesta = new List<object>();
+
                     var usuarioLogeado = from usr in contexto.Usuario
                                          where usr.Correo == pUsuario.Correo
                                          && usr.Clave == pUsuario.Clave
@@ -93,8 +95,16 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
                     {
                         respuestaUI.FechaUltimoRegistro = DateTime.Now;
                         ActualizarUsuario(respuestaUI);
+                        respuesta.Add(respuestaUI);
+
+                        List<Modulo> modulos = ModuloModelo.ObtenerModulosRolesPorUsuario(respuestaUI.IdUsuario);
+
+                        if(modulos != null && modulos.Count > 0)
+                        {
+                            respuesta.Add(modulos);
+                        }
                     }
-                    return respuestaUI;
+                    return respuesta;
 
                 }
                 catch (Exception ex)
