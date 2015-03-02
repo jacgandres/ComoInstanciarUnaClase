@@ -13,11 +13,18 @@ namespace MotorReservas.Modelo
         {
             using (MotorReservasContexto contexto = new MotorReservasContexto())
             {
-                InventariosPorEmpresa reporte = new InventariosPorEmpresa();
+                try
+                {
+                    InventariosPorEmpresa reporte = new InventariosPorEmpresa();
 
-                reporte = contexto.Database.SqlQuery<InventariosPorEmpresa>("InventariosPorEmpresa @IdEmpresa",  pIdEmpresa).FirstOrDefault();
+                    reporte = contexto.Database.SqlQuery<InventariosPorEmpresa>("InventariosPorEmpresa @IdEmpresa", pIdEmpresa).FirstOrDefault();
 
-                return reporte;
+                    return reporte;
+                }
+                catch (Exception ex)
+                { 
+                    throw ex;
+                }
             }
         }
     }

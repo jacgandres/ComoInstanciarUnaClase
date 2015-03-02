@@ -88,12 +88,15 @@ namespace MotorReservas.Modelo.ModeloAdministrativo
                                          where usr.Correo == pUsuario.Correo
                                          && usr.Clave == pUsuario.Clave
                                          select usr;
+
                     Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
+
                     if (respuestaUI != null)
                     {
                         respuestaUI.FechaUltimoRegistro = DateTime.Now;
                         ActualizarUsuario(respuestaUI);
                     }
+
                     return respuestaUI;
 
                 }

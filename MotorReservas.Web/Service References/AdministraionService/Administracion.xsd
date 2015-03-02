@@ -3,13 +3,15 @@
   <xs:complexType name="Usuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="FechaUltimoRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaUltimoRegistro" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="IdEmpresa" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UrlImagen1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UrlImagen2" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UrlImagen3" nillable="true" type="xs:string" />
@@ -23,4 +25,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfUsuario" nillable="true" type="tns:ArrayOfUsuario" />
+  <xs:complexType name="ArrayOfRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rol" nillable="true" type="tns:Rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRol" nillable="true" type="tns:ArrayOfRol" />
+  <xs:complexType name="Rol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rol" nillable="true" type="tns:Rol" />
 </xs:schema>

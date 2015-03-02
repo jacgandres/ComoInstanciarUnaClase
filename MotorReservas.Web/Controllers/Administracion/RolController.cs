@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MotorReservas.Entidad;
 using MotorReservas.Web.ConstumeAttributes;
 
 namespace MotorReservas.Web.Controllers.Administracion
@@ -13,7 +14,10 @@ namespace MotorReservas.Web.Controllers.Administracion
         // GET: Rol
         public ActionResult Index()
         {
-            return View();
+            AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient();
+            List<Rol> roles = servicio.ListarRoles();
+
+            return View(roles);
         }
     }
 }

@@ -44,6 +44,18 @@ namespace MotorReservas.Web.AdministraionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario", ReplyAction="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse")]
         System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ListarRoles", ReplyAction="http://tempuri.org/IAdministracion/ListarRolesResponse")]
+        System.Collections.Generic.List<MotorReservas.Entidad.Rol> ListarRoles();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ListarRoles", ReplyAction="http://tempuri.org/IAdministracion/ListarRolesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Rol>> ListarRolesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/Insertar", ReplyAction="http://tempuri.org/IAdministracion/InsertarResponse")]
+        bool Insertar(MotorReservas.Entidad.Rol pRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/Insertar", ReplyAction="http://tempuri.org/IAdministracion/InsertarResponse")]
+        System.Threading.Tasks.Task<bool> InsertarAsync(MotorReservas.Entidad.Rol pRol);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +123,22 @@ namespace MotorReservas.Web.AdministraionService {
         
         public System.Threading.Tasks.Task<MotorReservas.Entidad.Usuario> IniciarSesionUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
             return base.Channel.IniciarSesionUsuarioAsync(pUsuario);
+        }
+        
+        public System.Collections.Generic.List<MotorReservas.Entidad.Rol> ListarRoles() {
+            return base.Channel.ListarRoles();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Rol>> ListarRolesAsync() {
+            return base.Channel.ListarRolesAsync();
+        }
+        
+        public bool Insertar(MotorReservas.Entidad.Rol pRol) {
+            return base.Channel.Insertar(pRol);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertarAsync(MotorReservas.Entidad.Rol pRol) {
+            return base.Channel.InsertarAsync(pRol);
         }
     }
 }
