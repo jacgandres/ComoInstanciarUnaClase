@@ -1,0 +1,3 @@
+C:\Desarrollos\MotorReservas\MotorReservas.ProyectoBaseDatos\bin\Debug\MotorReservas.ProyectoBaseDatos.dacpac
+C:\Desarrollos\MotorReservas\MotorReservas.ProyectoBaseDatos\obj\Debug\MotorReservas.ProyectoBaseDatos.dll
+C:\Desarrollos\MotorReservas\MotorReservas.ProyectoBaseDatos\obj\Debug\MotorReservas.ProyectoBaseDatos.pdb

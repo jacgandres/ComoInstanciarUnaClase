@@ -1,0 +1,76 @@
+03/03/2015 11:54:25 a. m.	This log contains information about the import schema operation into project 'MotorReservas.ProyectoBaseDatos' on computer 'JACG_PC' by user 'JaimeAndrés'.
+03/03/2015 11:54:25 a. m.	Import of database schema has started.
+03/03/2015 11:54:32 a. m.	Gathering database options
+03/03/2015 11:54:32 a. m.	Gathering users
+03/03/2015 11:54:32 a. m.	Gathering roles
+03/03/2015 11:54:32 a. m.	Gathering application roles
+03/03/2015 11:54:32 a. m.	Gathering role memberships
+03/03/2015 11:54:32 a. m.	Gathering filegroups
+03/03/2015 11:54:32 a. m.	Gathering full-text catalogs
+03/03/2015 11:54:32 a. m.	Gathering assemblies
+03/03/2015 11:54:32 a. m.	Gathering certificates
+03/03/2015 11:54:32 a. m.	Gathering asymmetric keys
+03/03/2015 11:54:32 a. m.	Gathering symmetric keys
+03/03/2015 11:54:32 a. m.	Gathering encrypted symmetric keys
+03/03/2015 11:54:32 a. m.	Gathering schemas
+03/03/2015 11:54:32 a. m.	Gathering XML schema collections
+03/03/2015 11:54:32 a. m.	Gathering user-defined data types
+03/03/2015 11:54:32 a. m.	Gathering user-defined types
+03/03/2015 11:54:32 a. m.	Gathering table types
+03/03/2015 11:54:32 a. m.	Gathering unique keys for table types
+03/03/2015 11:54:32 a. m.	Gathering primary keys for table types
+03/03/2015 11:54:32 a. m.	Gathering check constraints for table types
+03/03/2015 11:54:32 a. m.	Gathering default constraints for table types
+03/03/2015 11:54:32 a. m.	Gathering partition functions
+03/03/2015 11:54:32 a. m.	Gathering partition schemes
+03/03/2015 11:54:32 a. m.	Gathering functions
+03/03/2015 11:54:32 a. m.	Gathering encrypted functions
+03/03/2015 11:54:32 a. m.	Gathering aggregates
+03/03/2015 11:54:32 a. m.	Gathering procedures
+03/03/2015 11:54:32 a. m.	Gathering encrypted procedures
+03/03/2015 11:54:32 a. m.	Gathering tables
+03/03/2015 11:54:32 a. m.	Gathering primary keys
+03/03/2015 11:54:32 a. m.	Gathering unique constraints
+03/03/2015 11:54:32 a. m.	Gathering foreign keys
+03/03/2015 11:54:32 a. m.	Gathering default constraints
+03/03/2015 11:54:32 a. m.	Gathering check constraints
+03/03/2015 11:54:32 a. m.	Gathering views
+03/03/2015 11:54:32 a. m.	Gathering encrypted views
+03/03/2015 11:54:32 a. m.	Gathering indexes
+03/03/2015 11:54:32 a. m.	Gathering statistics
+03/03/2015 11:54:32 a. m.	Gathering full-text index stoplists
+03/03/2015 11:54:32 a. m.	Gathering search property lists
+03/03/2015 11:54:32 a. m.	Gathering search properties
+03/03/2015 11:54:32 a. m.	Gathering full-text indexes
+03/03/2015 11:54:32 a. m.	Gathering column store indexes
+03/03/2015 11:54:32 a. m.	Gathering spatial indexes
+03/03/2015 11:54:32 a. m.	Gathering XML indexes
+03/03/2015 11:54:32 a. m.	Gathering encrypted triggers
+03/03/2015 11:54:32 a. m.	Gathering triggers
+03/03/2015 11:54:32 a. m.	Gathering encrypted and clr ddl triggers
+03/03/2015 11:54:32 a. m.	Gathering ddl triggers
+03/03/2015 11:54:32 a. m.	Gathering synonyms
+03/03/2015 11:54:32 a. m.	Gathering defaults
+03/03/2015 11:54:32 a. m.	Gathering data constraint uddt bindings
+03/03/2015 11:54:32 a. m.	Gathering rules
+03/03/2015 11:54:32 a. m.	Gathering data constraint uddt bindings
+03/03/2015 11:54:32 a. m.	Gathering message types
+03/03/2015 11:54:32 a. m.	Gathering queues
+03/03/2015 11:54:32 a. m.	Gathering contracts
+03/03/2015 11:54:32 a. m.	Gathering services
+03/03/2015 11:54:32 a. m.	Gathering event notifications
+03/03/2015 11:54:32 a. m.	Gathering remote service bindings
+03/03/2015 11:54:32 a. m.	Gathering broker priorities
+03/03/2015 11:54:32 a. m.	Gathering signatures
+03/03/2015 11:54:32 a. m.	Gathering data compression options
+03/03/2015 11:54:32 a. m.	Gathering sequence types
+03/03/2015 11:54:32 a. m.	Gathering database permissions
+03/03/2015 11:54:32 a. m.	Gathering extended properties
+03/03/2015 11:54:33 a. m.	Gathering credentials
+03/03/2015 11:54:33 a. m.	Gathering logins
+03/03/2015 11:54:33 a. m.	Gathering server audits
+03/03/2015 11:54:35 a. m.	Scanning project for duplicate elements
+03/03/2015 11:54:35 a. m.	Finished duplicate element processing
+03/03/2015 11:54:35 a. m.	Finished importing database.
+03/03/2015 11:54:35 a. m.	A summary of the import was saved to the following location: C:\Desarrollos\MotorReservas\MotorReservas.ProyectoBaseDatos\Import Schema Logs\MotorReservas.Proyec_20150303045425.log
+03/03/2015 11:54:35 a. m.	Click Finish to continue...

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorReservas.Modelo", "MotorReservas.Modelo\MotorReservas.Modelo.csproj", "{7C42679A-9D88-426E-AB15-D2BF623907D1}"
 EndProject
@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorReservas.Web", "MotorR
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{847670B3-4E55-403E-9758-964610374A0C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MotorReservas.ProyectoBaseDatos", "MotorReservas.ProyectoBaseDatos\MotorReservas.ProyectoBaseDatos.sqlproj", "{462CBFDA-3789-4FB1-863D-46636DF35A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,12 @@ Global
 		{847670B3-4E55-403E-9758-964610374A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{847670B3-4E55-403E-9758-964610374A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{847670B3-4E55-403E-9758-964610374A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462CBFDA-3789-4FB1-863D-46636DF35A4A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
