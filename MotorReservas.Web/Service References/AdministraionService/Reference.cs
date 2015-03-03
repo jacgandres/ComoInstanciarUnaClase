@@ -69,11 +69,35 @@ namespace MotorReservas.Web.AdministraionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ListarRoles", ReplyAction="http://tempuri.org/IAdministracion/ListarRolesResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Rol>> ListarRolesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/Insertar", ReplyAction="http://tempuri.org/IAdministracion/InsertarResponse")]
-        bool Insertar(MotorReservas.Entidad.Rol pRol);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuario", ReplyAction="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuarioResponse")]
+        System.Collections.Generic.List<MotorReservas.Entidad.Rol> ObtenerRolesPorUsuario(MotorReservas.Entidad.Usuario pUsuario);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/Insertar", ReplyAction="http://tempuri.org/IAdministracion/InsertarResponse")]
-        System.Threading.Tasks.Task<bool> InsertarAsync(MotorReservas.Entidad.Rol pRol);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuario", ReplyAction="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuarioResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Rol>> ObtenerRolesPorUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/RegistrarRol", ReplyAction="http://tempuri.org/IAdministracion/RegistrarRolResponse")]
+        bool RegistrarRol(MotorReservas.Entidad.Rol pRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/RegistrarRol", ReplyAction="http://tempuri.org/IAdministracion/RegistrarRolResponse")]
+        System.Threading.Tasks.Task<bool> RegistrarRolAsync(MotorReservas.Entidad.Rol pRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRol", ReplyAction="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRolResponse")]
+        bool VerificarUsuarioTieneRol(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRol", ReplyAction="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRolResponse")]
+        System.Threading.Tasks.Task<bool> VerificarUsuarioTieneRolAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IngresarRolUsuario", ReplyAction="http://tempuri.org/IAdministracion/IngresarRolUsuarioResponse")]
+        bool IngresarRolUsuario(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/IngresarRolUsuario", ReplyAction="http://tempuri.org/IAdministracion/IngresarRolUsuarioResponse")]
+        System.Threading.Tasks.Task<bool> IngresarRolUsuarioAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/EliminarRolUsuario", ReplyAction="http://tempuri.org/IAdministracion/EliminarRolUsuarioResponse")]
+        bool EliminarRolUsuario(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdministracion/EliminarRolUsuario", ReplyAction="http://tempuri.org/IAdministracion/EliminarRolUsuarioResponse")]
+        System.Threading.Tasks.Task<bool> EliminarRolUsuarioAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -175,12 +199,44 @@ namespace MotorReservas.Web.AdministraionService {
             return base.Channel.ListarRolesAsync();
         }
         
-        public bool Insertar(MotorReservas.Entidad.Rol pRol) {
-            return base.Channel.Insertar(pRol);
+        public System.Collections.Generic.List<MotorReservas.Entidad.Rol> ObtenerRolesPorUsuario(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerRolesPorUsuario(pUsuario);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertarAsync(MotorReservas.Entidad.Rol pRol) {
-            return base.Channel.InsertarAsync(pRol);
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MotorReservas.Entidad.Rol>> ObtenerRolesPorUsuarioAsync(MotorReservas.Entidad.Usuario pUsuario) {
+            return base.Channel.ObtenerRolesPorUsuarioAsync(pUsuario);
+        }
+        
+        public bool RegistrarRol(MotorReservas.Entidad.Rol pRol) {
+            return base.Channel.RegistrarRol(pRol);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RegistrarRolAsync(MotorReservas.Entidad.Rol pRol) {
+            return base.Channel.RegistrarRolAsync(pRol);
+        }
+        
+        public bool VerificarUsuarioTieneRol(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.VerificarUsuarioTieneRol(pUsuarioRol);
+        }
+        
+        public System.Threading.Tasks.Task<bool> VerificarUsuarioTieneRolAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.VerificarUsuarioTieneRolAsync(pUsuarioRol);
+        }
+        
+        public bool IngresarRolUsuario(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.IngresarRolUsuario(pUsuarioRol);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IngresarRolUsuarioAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.IngresarRolUsuarioAsync(pUsuarioRol);
+        }
+        
+        public bool EliminarRolUsuario(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.EliminarRolUsuario(pUsuarioRol);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EliminarRolUsuarioAsync(MotorReservas.Entidad.Usuario_Tiene_Rol pUsuarioRol) {
+            return base.Channel.EliminarRolUsuarioAsync(pUsuarioRol);
         }
     }
 }

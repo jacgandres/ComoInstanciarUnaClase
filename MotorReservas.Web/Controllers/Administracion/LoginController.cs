@@ -31,7 +31,7 @@ namespace MotorReservas.Web.Controllers.Administracion
                 pUsuario.Correo = Correo;
                 pUsuario = servicio.IniciarSesionUsuario(pUsuario);
                 if (pUsuario == null)
-                    return Json(new { response = false, message = "El Correo o Clave tienen algun dato invalido." });
+                    return Json(new { response = false, message = "El Correo o Clave tienen algun dato invalido."});
                 else
                 {
                     Helper.SessionHelper.AddUserToSession((pUsuario).IdUsuario.ToString());
@@ -39,6 +39,7 @@ namespace MotorReservas.Web.Controllers.Administracion
                     ResponseModel mResponse = new ResponseModel();
                     mResponse.SetResponse(true);
                     mResponse.href = "home";
+
                     List<Modulo> modulos = servicio.ObtenerModulosRolPorUsuario(pUsuario);
 
                     Session["Roles"] = modulos;
@@ -48,7 +49,7 @@ namespace MotorReservas.Web.Controllers.Administracion
             }
             else
             {
-                return Json(new { response = false, message = "Ocurrio un error con la validación del Formulario." });
+                return Json(new { response = false, message = "Ocurrio un error con la validación del Formulario."});
             }
         }
     }

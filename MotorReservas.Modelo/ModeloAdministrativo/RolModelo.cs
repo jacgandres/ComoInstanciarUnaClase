@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +20,14 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 }
                 catch (Exception ex)
                 {
-                    
                     throw ex;
                 }
-
             }
         }
 
         public static List<Rol> ListarRoles()
         {
-            using(MotorReservasContexto contexto = new MotorReservasContexto())
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
             {
                 try
                 {
@@ -40,7 +39,7 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 }
                 catch (Exception ex)
                 {
-                    
+
                     throw ex;
                 }
             }
@@ -51,5 +50,21 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
             throw new NotImplementedException();
         }
 
+        public static List<Rol> ObtenerRolesPorUsuario(Usuario pUsuario)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                List<Rol> roles = new List<Rol>();
+
+                var qRoles = from rol in contexto.Database.SqlQuery<Rol>("ObtenerRolesPorUsuario @IdUsuario",
+                                 new SqlParameter("IdUsuario", pUsuario.IdUsuario))
+                             orderby rol.Nombre ascending
+                             select rol;
+
+                roles = qRoles.ToList();
+
+                return roles;
+            }
+        }
     }
 }

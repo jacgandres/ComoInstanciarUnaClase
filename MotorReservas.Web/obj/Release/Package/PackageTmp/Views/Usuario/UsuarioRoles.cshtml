@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MotorReservas.Entidad.Rol>
+
+@{
+    ViewBag.Title = "Roles por Usuario";
+}
+
+<h2>Roles por Usuario</h2>
+
+<p>
+    @Html.ActionLink("Asignar Nuevo rol a Usuario", "CreateRolToUser",  new { idUsuario = ViewBag.IdUsuario } )
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Borrar Rol a Usuario", "DeleteRolToUser",
+                    new { id = item.IdRol, idUsuario = ViewBag.IdUsuario },
+                    new { onclick = "return confirm('Esta seguro que quiere borrar este Rol?')" })
+            </td>
+        </tr>
+    }
+
+</table>

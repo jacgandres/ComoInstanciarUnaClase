@@ -3,3 +3,11 @@ C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Release\Helper.pdb
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.csprojResolveAssemblyReference.cache
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.dll
 C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Release\Helper.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Release\Helper.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Release\Helper.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Desarrollos\MotorReservas\Helper\obj\Release\Helper.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReservas\Helper\obj\Release\Helper.dll
+C:\Desarrollos\MotorReservas\Helper\obj\Release\Helper.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Release\MotorReserva.Entidad.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Release\MotorReserva.Entidad.pdb

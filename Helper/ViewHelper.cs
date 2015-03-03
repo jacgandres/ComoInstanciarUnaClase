@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Globalization;
+using MotorReservas.Entidad;
 
 namespace Helper
 {
@@ -178,7 +179,7 @@ namespace Helper
                 return "0.000";
             }
         }
-        public static string CurrentController() 
+        public static string CurrentController()
         {
             return HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower();
         }
@@ -215,7 +216,7 @@ namespace Helper
 
             return str;
         }
-        public static string BaseUrl(string path = "", bool encode = false) 
+        public static string BaseUrl(string path = "", bool encode = false)
         {
             string url = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority +
                 HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/" + path;
@@ -247,13 +248,13 @@ namespace Helper
         {
             return Convert.ToDateTime(d);
         }
-        public static string CutPhrases(string frase, int lenght) 
+        public static string CutPhrases(string frase, int lenght)
         {
             if (frase == null) return "";
             if (frase.Length < lenght) return frase;
             return frase.Substring(0, lenght) + " ...";
         }
-        public static string CapitalizeAll(string frase) 
+        public static string CapitalizeAll(string frase)
         {
             if (frase == null)
             {
@@ -274,7 +275,7 @@ namespace Helper
 
             return dt.ToString("hh:mmtt", new System.Globalization.CultureInfo("en-US"));
         }
-        public static string TimeAgo(string d) 
+        public static string TimeAgo(string d)
         {
             if (d == "") return "";
 
@@ -287,19 +288,19 @@ namespace Helper
             TimeSpan timeSince = DateTime.Now.Subtract(dt);
             if (timeSince.TotalMilliseconds < 1)
                 return "Todavía";
-            if (timeSince.TotalMinutes < 1) 
+            if (timeSince.TotalMinutes < 1)
             {
                 if (time)
                 {
                     int s = Convert.ToInt32(timeSince.TotalSeconds);
                     return "Hace " + (s >= 0 && s <= 15 ? "un instante" : s + " segundos");
                 }
-                else 
+                else
                 {
                     return "Hoy";
                 }
             }
-            if (timeSince.TotalMinutes < 2) 
+            if (timeSince.TotalMinutes < 2)
             {
                 if (time)
                 {
@@ -309,7 +310,7 @@ namespace Helper
                 {
                     return "Hoy";
                 }
-            }                
+            }
             if (timeSince.TotalMinutes < 60)
             {
                 if (time)
@@ -331,7 +332,7 @@ namespace Helper
                 {
                     return "Hoy";
                 }
-            }                
+            }
             if (timeSince.TotalHours < 24)
             {
                 if (time)
@@ -342,7 +343,7 @@ namespace Helper
                 {
                     return "Hoy";
                 }
-            }                
+            }
             if (timeSince.TotalDays < 2)
             {
                 if (time)
@@ -353,8 +354,8 @@ namespace Helper
                 {
                     return "Ayer";
                 }
-            } 
-                
+            }
+
             if (timeSince.TotalDays < 365)
             {
                 if (time)
@@ -371,17 +372,17 @@ namespace Helper
             {
                 return dt.Day + " de " + getMonthName(Convert.ToInt32(dt.ToString("MM"))).ToLower() + " del " + dt.Year + " a la(s) " + dt.ToString("hh:mmtt").Replace(".", "");
             }
-            else 
+            else
             {
                 return dt.Day + " de " + getMonthName(Convert.ToInt32(dt.ToString("MM"))).ToLower() + " del " + dt.Year;
             }
         }
         public static string GetDayName(int id, bool _short = false)
         {
-            switch(id)
+            switch (id)
             {
                 case 1:
-                    return _short ? "Lun" :  "Lunes";
+                    return _short ? "Lun" : "Lunes";
                 case 2:
                     return _short ? "Mar" : "Martes";
                 case 3:
@@ -391,7 +392,7 @@ namespace Helper
                 case 5:
                     return _short ? "Vie" : "Viernes";
                 case 6:
-                    return _short ? "Sab" : "Sábado";;
+                    return _short ? "Sab" : "Sábado"; ;
                 case 0:
                     return _short ? "Dom" : "Domingo";
                 default:
@@ -400,16 +401,16 @@ namespace Helper
         }
         public static string GetYouTubeID(string YoutubeUrl = null)
         {
-            if (YoutubeUrl != null) 
+            if (YoutubeUrl != null)
             {
                 //Setup the RegEx Match and give it 
                 Match regexMatch = Regex.Match(YoutubeUrl, "^[^v]+v=(.{11}).*", RegexOptions.IgnoreCase);
                 if (regexMatch.Success) return regexMatch.Groups[1].Value;
             }
-            
+
             return null;
         }
-        public static int GetIdFromUrl(string url) 
+        public static int GetIdFromUrl(string url)
         {
             if (url == null) return 0;
 
@@ -418,7 +419,7 @@ namespace Helper
             if (int.TryParse(url.Split('-')[url.Split('-').Count() - 1], out id)) return id;
             else return 0;
         }
-        public static string ReplaceHttpInWord(string word) 
+        public static string ReplaceHttpInWord(string word)
         {
             if (word == null) return "";
 
@@ -429,7 +430,7 @@ namespace Helper
         {
             return Regex.Replace(html, "<.+?>", string.Empty);
         }
-        public static int GetAge(string d) 
+        public static int GetAge(string d)
         {
             if (String.IsNullOrEmpty(d)) return 0;
 
@@ -440,6 +441,12 @@ namespace Helper
             if (bday > today.AddYears(-age)) age--;
 
             return age;
+        }
+
+        public static string getNameForFiles(Usuario pUser)
+        {
+            string name = (pUser.IdUsuario + "_" + pUser.Nombre + "_" + pUser.Apellido + "_" + pUser.Correo.Replace("@", "").Replace(".", "")).Replace(" ", "");
+            return name;
         }
     }
 }

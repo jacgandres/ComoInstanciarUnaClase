@@ -80,6 +80,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotorReserva.Entidad\MotorReserva.Entidad.csproj">
+      <Project>{7184f326-e725-4747-91be-4ef6ac2bf1b1}</Project>
+      <Name>MotorReserva.Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

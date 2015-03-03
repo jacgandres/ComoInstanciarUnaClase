@@ -121,17 +121,73 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Insertar">
+  <xs:element name="ObtenerRolesPorUsuario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pRol" nillable="true" type="q13:Rol" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuario" nillable="true" type="q13:Usuario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertarResponse">
+  <xs:element name="ObtenerRolesPorUsuarioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertarResult" type="xs:boolean" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerRolesPorUsuarioResult" nillable="true" type="q14:ArrayOfRol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pRol" nillable="true" type="q15:Rol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarRolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTieneRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuarioRol" nillable="true" type="q16:Usuario_Tiene_Rol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTieneRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarUsuarioTieneRolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresarRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuarioRol" nillable="true" type="q17:Usuario_Tiene_Rol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresarRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IngresarRolUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pUsuarioRol" nillable="true" type="q18:Usuario_Tiene_Rol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarRolUsuarioResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

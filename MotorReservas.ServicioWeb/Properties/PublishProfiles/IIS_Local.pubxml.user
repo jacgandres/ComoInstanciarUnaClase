@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\MotorReservas\MotorReservas.ServicioWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Administracion.svc">
+      <publishTime>03/01/2015 03:56:37</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/01/2015 13:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/01/2015 13:32:26</publishTime>
+    </File>
+    <File Include="bin/MotorReserva.Entidad.dll">
+      <publishTime>03/03/2015 02:40:37</publishTime>
+    </File>
+    <File Include="bin/MotorReservas.Modelo.dll">
+      <publishTime>03/03/2015 02:40:38</publishTime>
+    </File>
+    <File Include="bin/MotorReservas.ServicioWeb.dll">
+      <publishTime>03/03/2015 02:43:11</publishTime>
+    </File>
+    <File Include="Inventario.svc">
+      <publishTime>03/01/2015 12:00:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/01/2015 03:51:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/03/2015 02:43:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

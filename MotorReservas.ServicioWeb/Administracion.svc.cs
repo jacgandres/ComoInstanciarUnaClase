@@ -14,6 +14,7 @@ namespace MotorReservas.ServicioWeb
     {
         #region Administracion de Usuarios
 
+        #region Seccion de servicios de usuarios
         public bool RegistrarUsuario(Usuario pUsuario)
         {
             return UsuarioModelo.Insertar(pUsuario);
@@ -44,17 +45,19 @@ namespace MotorReservas.ServicioWeb
             return UsuarioModelo.ObtenerUsuarioPorId(pUsuario);
         }
 
+        public List<Modulo> ObtenerModulosRolPorUsuario(Usuario pUsuario)
+        {
+            return ModuloModelo.ObtenerModulosRolesPorUsuario(pUsuario.IdUsuario);
+        }
+        #endregion
+
         public List<Empresa> ObtenerEmpresas()
         {
             return UsuarioModelo.ObtenerEmpresas();
         }
 
-        public List<Modulo> ObtenerModulosRolPorUsuario(Usuario pUsuario)
-        {
-            return ModuloModelo.ObtenerModulosRolesPorUsuario(pUsuario.IdUsuario);
-        }
-
-        public bool Insertar(Rol pRol)
+        #region Seccion de servicios de Rol
+        public bool RegistrarRol(Rol pRol)
         {
             return RolModelo.Insertar(pRol);
         }
@@ -64,6 +67,29 @@ namespace MotorReservas.ServicioWeb
             return RolModelo.ListarRoles();
         }
 
+        public List<Rol> ObtenerRolesPorUsuario(Usuario pUsuario)
+        {
+            return RolModelo.ObtenerRolesPorUsuario(pUsuario);
+        }
+        #endregion
+
+        #region Seccion de servicios de Usuarios_Tiene_Rol
+        public bool VerificarUsuarioTieneRol(Usuario_Tiene_Rol pUsuarioRol)
+        {
+           return Usuario_Tiene_RolModelo.VerificarUsuarioTieneRol(pUsuarioRol);
+        }
+
+        public bool IngresarRolUsuario(Usuario_Tiene_Rol pUsuarioRol)
+        {
+            return Usuario_Tiene_RolModelo.IngresarRolUsuario(pUsuarioRol);
+        }
+
+        public bool EliminarRolUsuario(Usuario_Tiene_Rol pUsuarioRol)
+        {
+            return Usuario_Tiene_RolModelo.EliminarRolUsuario(pUsuarioRol);
+        }
+
+        #endregion
         #endregion
     }
 }

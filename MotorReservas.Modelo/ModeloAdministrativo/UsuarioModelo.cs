@@ -51,6 +51,11 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
             {
                 try
                 {
+                    if (pUsuario.FechaUltimaSesion == null)
+                        pUsuario.FechaUltimaSesion = (from cont in contexto.Usuario
+                                                        where cont.IdUsuario == pUsuario.IdUsuario
+                                                        select cont.FechaUltimaSesion).FirstOrDefault();
+
                     var User = contexto.Entry(pUsuario);
                     User.State = System.Data.Entity.EntityState.Modified;
                     return contexto.SaveChanges() > 0;
@@ -68,7 +73,8 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
             {
                 try
                 {
-                    contexto.Usuario.Remove(pUsuario);
+                    var usr = contexto.Entry(pUsuario);
+                    usr.State = System.Data.Entity.EntityState.Deleted;
                     return contexto.SaveChanges() > 0;
                 }
                 catch (Exception ex)
@@ -85,17 +91,15 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 try
                 {
                     var usuarioLogeado = from usr in contexto.Usuario
-                                         where usr.Correo == pUsuario.Correo
-                                         && usr.Clave == pUsuario.Clave
+                                         where usr.Correo == pUsuario.Correo && usr.Clave == pUsuario.Clave
                                          select usr;
 
                     Usuario respuestaUI = usuarioLogeado.FirstOrDefault();
 
                     if (respuestaUI != null)
                     {
-                        respuestaUI.FechaUltimoRegistro = DateTime.Now;
+                        respuestaUI.FechaUltimaSesion = DateTime.Now;
                         ActualizarUsuario(respuestaUI);
-
                     }
 
                     return respuestaUI;
@@ -134,9 +138,9 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 try
                 {
                     var listaEmpresas = from cntx in contexto.Empresa
-                                       orderby cntx.Nombre
-                                       where cntx.Activo ==true
-                                       select cntx;
+                                        orderby cntx.Nombre
+                                        where cntx.Activo == true
+                                        select cntx;
 
                     return listaEmpresas.ToList();
                 }

@@ -141,6 +141,7 @@
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Rol.datasource" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Modulo.datasource" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Empresa.datasource" />
+    <None Include="Properties\PublishProfiles\ISS_Local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -171,9 +172,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Uploads\1-20150302011103.jpg" />
-    <Content Include="Uploads\2-20150302011103.jpg" />
-    <Content Include="Uploads\20150302011103.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -204,9 +202,13 @@
     <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Usuario\Details.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\UsuarioRoles.cshtml" />
+    <Content Include="Views\Usuario\CreateRolToUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
