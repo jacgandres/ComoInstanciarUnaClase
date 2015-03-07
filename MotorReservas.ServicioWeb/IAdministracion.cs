@@ -47,6 +47,18 @@ namespace MotorReservas.ServicioWeb
 
         [OperationContract]
         bool RegistrarRol(Rol pRol);
+
+        [OperationContract]
+        bool ActualizarRol(Rol pRol);
+
+        [OperationContract]
+        bool EliminarRol(Rol pRol);
+
+        [OperationContract]
+        Rol ObtenerRolPorId(Rol pRol);
+
+        [OperationContract]
+        List<Modulo> ObtenerModulosPorRol(Rol pRol);
         #endregion
 
         #region Seccion de servicios de Usuarios_Tiene_Rol
@@ -58,6 +70,22 @@ namespace MotorReservas.ServicioWeb
 
         [OperationContract]
         bool EliminarRolUsuario(Usuario_Tiene_Rol pUsuarioRol);
+        #endregion
+
+        #region seccion de servicios de Modulo_Tiene_Rol
+
+        [OperationContract]
+        bool EliminarModuloRolPorId(Modulos_Tiene_Rol pModuloRol);
+
+        [OperationContract]
+        bool RegistrarModuloRol(Modulos_Tiene_Rol pModuloRol);
+        #endregion
+
+        #region Seccion de servicios para Modulo
+
+        [OperationContract]
+        List<Modulo> ObtenerModulos();
+
         #endregion
     }
 }

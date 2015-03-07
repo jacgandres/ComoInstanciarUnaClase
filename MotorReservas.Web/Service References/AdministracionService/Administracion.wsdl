@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Administracion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49541/Administracion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdministracion_RegistrarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ListarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ListarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosRolPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosRolPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosRolPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosRolPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IniciarSesionUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IniciarSesionUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerUsuarioPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerUsuarioPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ListarRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRoles" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ListarRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerRolesPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRolesPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerRolesPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRolesPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerRolPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRolPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerRolPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRolPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosPorRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosPorRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulosPorRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosPorRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_VerificarUsuarioTieneRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioTieneRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_VerificarUsuarioTieneRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioTieneRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IngresarRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IngresarRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_IngresarRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IngresarRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarRolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarRolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarRolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarRolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarModuloRolPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModuloRolPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_EliminarModuloRolPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModuloRolPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarModuloRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarModuloRol" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarModuloRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarModuloRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulos" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModulos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModulosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdministracion">
+    <wsdl:operation name="RegistrarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarUsuario" message="tns:IAdministracion_RegistrarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/RegistrarUsuarioResponse" message="tns:IAdministracion_RegistrarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ListarUsuarios" message="tns:IAdministracion_ListarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ListarUsuariosResponse" message="tns:IAdministracion_ListarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ActualizarUsuario" message="tns:IAdministracion_ActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ActualizarUsuarioResponse" message="tns:IAdministracion_ActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuario" message="tns:IAdministracion_EliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarUsuarioResponse" message="tns:IAdministracion_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosRolPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario" message="tns:IAdministracion_ObtenerModulosRolPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuarioResponse" message="tns:IAdministracion_ObtenerModulosRolPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesionUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuario" message="tns:IAdministracion_IniciarSesionUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/IniciarSesionUsuarioResponse" message="tns:IAdministracion_IniciarSesionUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId" message="tns:IAdministracion_ObtenerUsuarioPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerUsuarioPorIdResponse" message="tns:IAdministracion_ObtenerUsuarioPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresas" message="tns:IAdministracion_ObtenerEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresasResponse" message="tns:IAdministracion_ObtenerEmpresas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ListarRoles" message="tns:IAdministracion_ListarRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ListarRolesResponse" message="tns:IAdministracion_ListarRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolesPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuario" message="tns:IAdministracion_ObtenerRolesPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuarioResponse" message="tns:IAdministracion_ObtenerRolesPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarRol" message="tns:IAdministracion_RegistrarRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/RegistrarRolResponse" message="tns:IAdministracion_RegistrarRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ActualizarRol" message="tns:IAdministracion_ActualizarRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ActualizarRolResponse" message="tns:IAdministracion_ActualizarRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarRol" message="tns:IAdministracion_EliminarRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarRolResponse" message="tns:IAdministracion_EliminarRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerRolPorId" message="tns:IAdministracion_ObtenerRolPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerRolPorIdResponse" message="tns:IAdministracion_ObtenerRolPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosPorRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosPorRol" message="tns:IAdministracion_ObtenerModulosPorRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosPorRolResponse" message="tns:IAdministracion_ObtenerModulosPorRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuarioTieneRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRol" message="tns:IAdministracion_VerificarUsuarioTieneRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRolResponse" message="tns:IAdministracion_VerificarUsuarioTieneRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IngresarRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/IngresarRolUsuario" message="tns:IAdministracion_IngresarRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/IngresarRolUsuarioResponse" message="tns:IAdministracion_IngresarRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarRolUsuario" message="tns:IAdministracion_EliminarRolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarRolUsuarioResponse" message="tns:IAdministracion_EliminarRolUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarModuloRolPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarModuloRolPorId" message="tns:IAdministracion_EliminarModuloRolPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarModuloRolPorIdResponse" message="tns:IAdministracion_EliminarModuloRolPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarModuloRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarModuloRol" message="tns:IAdministracion_RegistrarModuloRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/RegistrarModuloRolResponse" message="tns:IAdministracion_RegistrarModuloRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulos" message="tns:IAdministracion_ObtenerModulos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosResponse" message="tns:IAdministracion_ObtenerModulos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Administracion" type="tns:IAdministracion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/RegistrarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosRolPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerModulosRolPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesionUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/IniciarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorId">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerUsuarioPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresas">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRoles">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ListarRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolesPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerRolesPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/RegistrarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ActualizarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolPorId">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerRolPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulosPorRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerModulosPorRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuarioTieneRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/VerificarUsuarioTieneRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IngresarRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/IngresarRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarRolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarRolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarModuloRolPorId">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarModuloRolPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarModuloRol">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/RegistrarModuloRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModulos">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerModulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Administracion">
+    <wsdl:port name="Administracion" binding="tns:Administracion">
+      <soap:address location="http://localhost:49541/Administracion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

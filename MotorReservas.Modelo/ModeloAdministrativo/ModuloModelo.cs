@@ -32,5 +32,25 @@ namespace MotorReservas.ModeloAdministrativo
                 
             }
         }
+
+        public static List<Modulo> ObtenerModulos()
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                try
+                {
+                    List<Modulo> modulos = (from mod in contexto.Modulo
+                                            orderby mod.Nombre ascending
+                                            select mod).ToList();
+
+                    return modulos;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+        }
     }
 }

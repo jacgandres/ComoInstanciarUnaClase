@@ -16,7 +16,7 @@ namespace MotorReservas.Web.Controllers.Administracion
         // GET: Usuario
         public ActionResult Index()
         {
-            using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
             {
                 List<Usuario> usuarios = new List<Usuario>();
 
@@ -35,7 +35,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult Details(int id)
         {
-            using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
             {
                 Usuario user = new Usuario();
                 user.IdUsuario = id;
@@ -49,7 +49,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult Create()
         {
-            using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
             {
                 ViewBag.Empresas = servicio.ObtenerEmpresas();
                 return View();
@@ -64,12 +64,12 @@ namespace MotorReservas.Web.Controllers.Administracion
             pUser.FechaUltimaSesion = DateTime.Now;
             if (ModelState.IsValid == true)
             {
-                using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+                using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
                 {
                     ResponseModel mResponse = new ResponseModel();
 
-                    if (file != null) 
-                        ProcesarImagenes(pUser, file, mResponse); 
+                    if (file != null)
+                        ProcesarImagenes(pUser, file, mResponse);
 
                     if (servicio.RegistrarUsuario(pUser) == true)
                     {
@@ -88,7 +88,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult Delete(int id)
         {
-            using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
             {
                 Usuario user = new Usuario();
                 user.IdUsuario = id;
@@ -101,7 +101,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult Edit(int id)
         {
-            using (AdministraionService.AdministracionClient cliente = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient cliente = new AdministracionService.AdministracionClient())
             {
                 Usuario user = new Usuario();
                 user.IdUsuario = id;
@@ -124,12 +124,12 @@ namespace MotorReservas.Web.Controllers.Administracion
 
             if (ModelState.IsValid == true)
             {
-                using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+                using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
                 {
                     ResponseModel mResponse = new ResponseModel();
 
-                    if (file != null) 
-                        ProcesarImagenes(pUser, file, mResponse); 
+                    if (file != null)
+                        ProcesarImagenes(pUser, file, mResponse);
 
 
                     if (servicio.ActualizarUsuario(pUser) == true)
@@ -177,7 +177,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult UsuarioRoles(int id)
         {
-            using (AdministraionService.AdministracionClient cliente = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient cliente = new AdministracionService.AdministracionClient())
             {
                 Usuario user = new Usuario();
                 user.IdUsuario = id;
@@ -189,7 +189,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult CreateRolToUser(int idUsuario)
         {
-            using (AdministraionService.AdministracionClient cliente = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient cliente = new AdministracionService.AdministracionClient())
             {
                 ViewBag.Roles = cliente.ListarRoles();
                 Usuario_Tiene_Rol rolUsuario = new Usuario_Tiene_Rol();
@@ -208,7 +208,7 @@ namespace MotorReservas.Web.Controllers.Administracion
         {
             if (ModelState.IsValid == true)
             {
-                using (AdministraionService.AdministracionClient cliente = new AdministraionService.AdministracionClient())
+                using (AdministracionService.AdministracionClient cliente = new AdministracionService.AdministracionClient())
                 {
                     if (cliente.VerificarUsuarioTieneRol(pUsuario) == true)
                     {
@@ -232,7 +232,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
         public ActionResult DeleteRolToUser(int id, int idUsuario)
         {
-            using (AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient())
+            using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
             {
                 Usuario_Tiene_Rol usuarioRol = new Usuario_Tiene_Rol();
                 usuarioRol.IdRol = id;

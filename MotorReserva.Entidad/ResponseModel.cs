@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MotorReserva.Entidad
+namespace MotorReservas.Entidad
 {
     public class ResponseModel
     {

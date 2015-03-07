@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MotorReservas.Entidad.Modulo>
+
+@{
+    ViewBag.Title = "Modulos Por Rol";
+}
+
+<h2>Modulos Por Rol</h2>
+
+<p>
+    @Html.ActionLink("Asignar Nuevo Modulo al Rol", "CreateModuleToRol", new { idRol = ViewBag.IdRol })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Borrar Modulo a Rol", "DeleteRolToUser",
+                   new { id = item.IdModulo, IdRol = ViewBag.IdRol },
+                   new { onclick = "return confirm('Esta seguro que quiere borrar este Modulo para el Rol?')" })
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    @Html.ActionLink("Volver al Detalle del Rol", "Detail", new { id = ViewBag.IdRol })
+</p>

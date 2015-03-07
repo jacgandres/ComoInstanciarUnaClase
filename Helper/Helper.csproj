@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="ConvercionXML.cs" />
     <Compile Include="ELog.cs" />
     <Compile Include="HashHelper.cs" />
     <Compile Include="ImageHelper.cs" />

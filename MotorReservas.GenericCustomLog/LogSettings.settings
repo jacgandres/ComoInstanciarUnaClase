@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MotorReservas.GenericCustomLog" GeneratedClassName="LogSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StringConection" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">persistsecurityinfo=True;server=JACG_PC;user id=sa;database=MotorReservas; password = 1234567890;</Value>
+    </Setting>
+    <Setting Name="PathLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\TMP\Log.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

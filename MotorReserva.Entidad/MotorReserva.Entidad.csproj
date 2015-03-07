@@ -56,6 +56,11 @@
     <Compile Include="Empresa.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="EstadoContrato.cs" />
+    <Compile Include="Exceptions\Exceptions\ModeloException.cs" />
+    <Compile Include="Exceptions\Exceptions\NegocioException.cs" />
+    <Compile Include="Exceptions\Exceptions\ServiceException.cs" />
+    <Compile Include="Exceptions\Exceptions\WebControllerException.cs" />
+    <Compile Include="Exceptions\Fault\ApplicationFault.cs" />
     <Compile Include="FormaPago.cs" />
     <Compile Include="FormaPago_Tiene_Reserva.cs" />
     <Compile Include="Inventario.cs" />

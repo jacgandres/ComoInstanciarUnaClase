@@ -35,7 +35,7 @@ namespace MotorReservas.Web.ConstumeAttributes
             {
                 if (HttpContext.Current.Session["Roles"] == null)
                 {
-                    AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient();
+                    AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient();
                     Usuario usr = new Usuario();
                     usr.IdUsuario = SessionHelper.GetUser();
                     HttpContext.Current.Session["Roles"] = servicio.ObtenerModulosRolPorUsuario(usr);

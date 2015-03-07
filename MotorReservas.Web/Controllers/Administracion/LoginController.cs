@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Web;
 using System.Web.Mvc;
+using GenericCustomLog;
+using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 using MotorReserva.Entidad;
 using MotorReservas.Entidad;
+using MotorReservas.Entidad.Exceptions.Exceptions;
 using MotorReservas.Web.ConstumeAttributes;
 
 namespace MotorReservas.Web.Controllers.Administracion
@@ -22,34 +26,63 @@ namespace MotorReservas.Web.Controllers.Administracion
         [OnlyAjaxRequestAttribute]
         public JsonResult Acceder(string Correo, string Clave)
         {
-            AdministraionService.AdministracionClient servicio = new AdministraionService.AdministracionClient();
+            AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient();
             Usuario pUsuario = new Usuario();
-            if (ModelState.IsValid)
+            using (new GenericTracer("Trace", Correo, "LoginController.Acceder", "", ""))
             {
-                Clave = Helper.HashHelper.MD5(Clave);
-                pUsuario.Clave = Clave;
-                pUsuario.Correo = Correo;
-                pUsuario = servicio.IniciarSesionUsuario(pUsuario);
-                if (pUsuario == null)
-                    return Json(new { response = false, message = "El Correo o Clave tienen algun dato invalido."});
-                else
+                if (ModelState.IsValid)
                 {
-                    Helper.SessionHelper.AddUserToSession((pUsuario).IdUsuario.ToString());
+                    FaultException faultExc = null;
+                    Clave = Helper.HashHelper.MD5(Clave);
+                    pUsuario.Clave = Clave;
+                    pUsuario.Correo = Correo;
+                    ResponseModel mResponse = null;
+                    try
+                    {
+                        mResponse = new ResponseModel();
+                        pUsuario = servicio.IniciarSesionUsuario(pUsuario);
+                        if (pUsuario == null)
+                            return Json(new { response = false, message = "El Correo o Clave tienen algun dato invalido." });
+                        else
+                        {
+                            Helper.SessionHelper.AddUserToSession((pUsuario).IdUsuario.ToString());
 
-                    ResponseModel mResponse = new ResponseModel();
-                    mResponse.SetResponse(true);
-                    mResponse.href = "home";
+                            mResponse.SetResponse(true);
+                            mResponse.href = "home";
 
-                    List<Modulo> modulos = servicio.ObtenerModulosRolPorUsuario(pUsuario);
+                            List<Modulo> modulos = servicio.ObtenerModulosRolPorUsuario(pUsuario);
 
-                    Session["Roles"] = modulos;
+                            Session["Roles"] = modulos;
 
+                        }
+                    }
+                    catch (FaultException ServExc)
+                    {
+                        faultExc = ServExc;
+                    }
+                    catch (ServiceException servExc)
+                    {
+                        throw new ServiceException(servExc.CodigoError + "*" + servExc.Messages);
+                    }
+                    catch (NegocioException posBolivarcomponentExc)
+                    {
+                        throw new NegocioException(posBolivarcomponentExc.CodigoError + "*" + posBolivarcomponentExc.Messages);
+                    }
+                    catch (Exception exc)
+                    {
+                        Helper.FuncionesComun.CommonFunctions.ExtendesExceptionProperties("", "Acceder", pUsuario, exc, Correo + " " + Clave);
+                        bool rethrow = ExceptionPolicy.HandleException(exc, "Politica Controlador");
+                        throw;
+                    }
+                    finally
+                    {
+                        if (faultExc != null)
+                            throw faultExc;
+                    }
                     return Json(mResponse);
                 }
-            }
-            else
-            {
-                return Json(new { response = false, message = "Ocurrio un error con la validación del Formulario."});
+                else
+                    return Json(new { response = false, message = "Ocurrio un error con la validación del Formulario." });
             }
         }
     }

@@ -29,6 +29,7 @@ namespace MotorReservas.Entidad
         public string Nombre { get; set; }
 
         [DataMemberAttribute]
+        [Display(Name = "Fecha Registro")]
         public DateTime FechaRegistro { get; set; }
 
         [DataMemberAttribute]

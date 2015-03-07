@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1b02b841-da4e-4051-b229-75b11f9d7fcf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="MotorReserva.Entidad" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49541/Administracion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Administracion.xsd" MetadataType="Schema" ID="41a11e4e-2acf-411d-9db8-239d53b35818" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd2" />
+    <MetadataFile FileName="Administracion.wsdl" MetadataType="Wsdl" ID="77de625c-bdda-413c-8488-59e627f056f7" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?wsdl" />
+    <MetadataFile FileName="Administracion.disco" MetadataType="Disco" ID="c98610ea-dea2-4fa8-abf0-f1e209555086" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?disco" />
+    <MetadataFile FileName="Administracion1.xsd" MetadataType="Schema" ID="794d30d5-220c-4659-a6fd-161daa40a57b" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd0" />
+    <MetadataFile FileName="Administracion2.xsd" MetadataType="Schema" ID="3b1983e2-40ab-4be0-9e68-9c1b6ceb67c5" SourceId="1" SourceUrl="http://localhost:49541/Administracion.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
