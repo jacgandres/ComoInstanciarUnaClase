@@ -130,25 +130,6 @@ namespace MotorReservas.ModeloAdministrativo.ModeloAdministrativo
                 }
             }
         }
-
-        public static List<Empresa> ObtenerEmpresas()
-        {
-            using (MotorReservasContexto contexto = new MotorReservasContexto())
-            {
-                try
-                {
-                    var listaEmpresas = from cntx in contexto.Empresa
-                                        orderby cntx.Nombre
-                                        where cntx.Activo == true
-                                        select cntx;
-
-                    return listaEmpresas.ToList();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-        }
+       
     }
 }

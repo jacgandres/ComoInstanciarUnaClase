@@ -131,6 +131,7 @@
     <Compile Include="Controllers\Administracion\RolController.cs" />
     <Compile Include="Controllers\Administracion\UsuarioController.cs" />
     <Compile Include="Controllers\Comun\ErrorController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -264,6 +265,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Empresa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

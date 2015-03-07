@@ -15,6 +15,7 @@ namespace MotorReservas.ServicioWeb
         #region Administracion de Usuarios
 
         #region Seccion de servicios de usuarios
+
         public bool RegistrarUsuario(Usuario pUsuario)
         {
             return UsuarioModelo.Insertar(pUsuario);
@@ -49,12 +50,8 @@ namespace MotorReservas.ServicioWeb
         {
             return ModuloModelo.ObtenerModulosRolesPorUsuario(pUsuario.IdUsuario);
         }
-        #endregion
 
-        public List<Empresa> ObtenerEmpresas()
-        {
-            return UsuarioModelo.ObtenerEmpresas();
-        }
+        #endregion
 
         #region Seccion de servicios para Modulo
 
@@ -129,6 +126,30 @@ namespace MotorReservas.ServicioWeb
             return Modulo_Tiene_RolModelo.RegistrarModuloRol(pModuloRol);
         }
         #endregion
+
+        #endregion
+
+        #region Administracion de Empresas       
+
+        public bool Insertar(Empresa pEmpresa)
+        {
+            return EmpresaModelo.Insertar(pEmpresa);
+        }
+
+        public bool EliminarEmpresa (Empresa pEmpresa)
+        {
+            return EmpresaModelo.EliminarEmpresa(pEmpresa);
+        }
+
+        public Empresa ObtenerEmpresaPorId(Empresa pEmpresa)
+        {
+            return EmpresaModelo.ObtenerEmpresaPorId(pEmpresa);
+        }
+
+        public List<Empresa> ObtenerEmpresas()
+        {
+            return EmpresaModelo.ObtenerEmpresas();
+        }
 
         #endregion
     }

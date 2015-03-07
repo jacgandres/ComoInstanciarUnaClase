@@ -2,15 +2,15 @@
 <SchemaComparison>
   <Version>10</Version>
   <SourceModelProvider>
-    <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=JACG_PC;Initial Catalog=MotorReservas;Persist Security Info=True;User ID=sa;Pooling=False</ConnectionString>
-    </ConnectionBasedModelProvider>
-  </SourceModelProvider>
-  <TargetModelProvider>
     <ProjectBasedModelProvider>
       <ProjectGuid>{462cbfda-3789-4fb1-863d-46636df35a4a}</ProjectGuid>
       <Name>MotorReservas.ProyectoBaseDatos</Name>
     </ProjectBasedModelProvider>
+  </SourceModelProvider>
+  <TargetModelProvider>
+    <ConnectionBasedModelProvider>
+      <ConnectionString>Data Source=JECA-PC\JECACARVAJAL;Initial Catalog=MotorReservas;Persist Security Info=True;User ID=sa;Pooling=False</ConnectionString>
+    </ConnectionBasedModelProvider>
   </TargetModelProvider>
   <SchemaCompareSettingsService>
     <SchemaCompareSettingsService>
@@ -99,10 +99,6 @@
       <PropertyElementName>
         <Name>DropRoleMembersNotInSource</Name>
         <Value>False</Value>
-      </PropertyElementName>
-      <PropertyElementName>
-        <Name>DropStatisticsNotInSource</Name>
-        <Value>True</Value>
       </PropertyElementName>
       <PropertyElementName>
         <Name>GenerateSmartDefaults</Name>

@@ -40,30 +40,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Modulo" nillable="true" type="tns:Modulo" />
-  <xs:complexType name="ArrayOfEmpresa">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Empresa" nillable="true" type="tns:Empresa" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmpresa" nillable="true" type="tns:ArrayOfEmpresa" />
-  <xs:complexType name="Empresa">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="IdCiudad" type="xs:int" />
-      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
-      <xs:element minOccurs="0" name="IdPerfil" type="xs:int" />
-      <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UrlImagen1" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UrlImagen2" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UrlImagen3" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Empresa" nillable="true" type="tns:Empresa" />
   <xs:complexType name="ArrayOfRol">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Rol" nillable="true" type="tns:Rol" />
@@ -99,4 +75,28 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Modulos_Tiene_Rol" nillable="true" type="tns:Modulos_Tiene_Rol" />
+  <xs:complexType name="Empresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCiudad" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPerfil" type="xs:int" />
+      <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImagen1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImagen2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImagen3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empresa" nillable="true" type="tns:Empresa" />
+  <xs:complexType name="ArrayOfEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Empresa" nillable="true" type="tns:Empresa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpresa" nillable="true" type="tns:ArrayOfEmpresa" />
 </xs:schema>

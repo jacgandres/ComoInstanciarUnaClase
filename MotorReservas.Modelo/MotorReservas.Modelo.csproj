@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Contexto\MotorReservasContexto.cs" />
     <Compile Include="Modelo\CanalVentaModelo.cs" />
+    <Compile Include="Modelo\EmpresaModelo.cs" />
     <Compile Include="Modelo\InventarioModelo.cs" />
     <Compile Include="ModeloAdministrativo\Modulo_Tiene_RolModelo.cs" />
     <Compile Include="ModeloAdministrativo\RolModelo.cs" />

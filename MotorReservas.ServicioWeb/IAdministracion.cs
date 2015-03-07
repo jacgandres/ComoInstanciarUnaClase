@@ -33,10 +33,7 @@ namespace MotorReservas.ServicioWeb
 
         [OperationContract]
         Usuario ObtenerUsuarioPorId(Usuario pUsuario);
-        #endregion
-
-        [OperationContract]
-        List<Empresa> ObtenerEmpresas();
+        #endregion       
 
         #region Seccion de servicios de Rol
         [OperationContract]
@@ -87,5 +84,22 @@ namespace MotorReservas.ServicioWeb
         List<Modulo> ObtenerModulos();
 
         #endregion
+
+        #region Administracion Empresas
+
+        [OperationContract]
+        bool Insertar(Empresa pEmpresa);
+
+        [OperationContract]
+        bool EliminarEmpresa(Empresa pEmpresa);
+
+        [OperationContract]
+        Empresa ObtenerEmpresaPorId(Empresa pEmpresa);
+
+        [OperationContract]
+        List<Empresa> ObtenerEmpresas();
+
+
+        #endregion 
     }
 }
