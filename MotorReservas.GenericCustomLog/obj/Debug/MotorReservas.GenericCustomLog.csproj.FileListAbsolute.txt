@@ -23,7 +23,6 @@ C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\bin\Debug\Microsoft.
 C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
 C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\bin\Debug\Newtonsoft.Json.xml
 C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.xml
-C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\obj\Debug\MotorReservas.GenericCustomLog.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\obj\Debug\MotorReservas.GenericCustomLog.dll
 C:\Desarrollos\MotorReservas\MotorReservas.GenericCustomLog\obj\Debug\MotorReservas.GenericCustomLog.pdb
 C:\Users\Jeca\Documents\MotorReserva\MotorReservas.GenericCustomLog\bin\Debug\MotorReservas.GenericCustomLog.dll.config

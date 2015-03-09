@@ -1,7 +1,7 @@
 ﻿@model MotorReservas.Entidad.Usuario_Tiene_Rol
 
 @{
-    List<MotorReservas.Entidad.Rol> lstRoles = ViewBag.Roles;
+    List<MotorReservas.Entidad.Rol> lstRolesUsuarioTieneRol = ViewBag.Roles;
     ViewBag.Title = "Asignar Rol a Usuario";
 }
 
@@ -23,12 +23,12 @@
             <div class="col-md-10">
                 @{
                     List<SelectListItem> listItems = new List<SelectListItem>();
-                    foreach (MotorReservas.Entidad.Rol rol in lstRoles)
+                    foreach (MotorReservas.Entidad.Rol rol in lstRolesUsuarioTieneRol)
                     {
                         listItems.Add(new SelectListItem { Text = rol.Nombre, Value = rol.IdRol.ToString() });
                     }
                 }
-                @Html.DropDownListFor(lstRoles => lstRoles.IdRol,
+                @Html.DropDownListFor(lstRolesUsuarioTieneRol => lstRolesUsuarioTieneRol.IdRol,
                                         listItems, "-- Seleccionar Empresa --")
                 <input type="hidden" name="IdRol" id="txtIdRol" value="" />
             </div>

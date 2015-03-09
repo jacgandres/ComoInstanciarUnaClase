@@ -87,6 +87,18 @@
       <Project>{7184f326-e725-4747-91be-4ef6ac2bf1b1}</Project>
       <Name>MotorReserva.Entidad</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MotorReservas.Caching\MotorReservas.Caching.csproj">
+      <Project>{9a0bdd2b-4238-4efa-8f6a-ab25f4f72205}</Project>
+      <Name>MotorReservas.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MotorReservas.CustomLogging\MotorReservas.CustomLogging.csproj">
+      <Project>{c6ddbaf6-bf47-4101-adb6-e29df1542d82}</Project>
+      <Name>MotorReservas.CustomLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MotorReservas.GenericCustomLog\MotorReservas.GenericCustomLog.csproj">
+      <Project>{5813365e-022e-46d2-9481-319579b5edc3}</Project>
+      <Name>MotorReservas.GenericCustomLog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

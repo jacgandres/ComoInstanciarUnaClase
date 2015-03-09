@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Web.Security;
+using GenericCustomLog;
 
 namespace Helper
 {
@@ -34,17 +35,20 @@ namespace Helper
         }
         public static void AddUserToSession(string id)
         {
-            bool persist = true;
-            var cookie = FormsAuthentication.GetAuthCookie("usuario", persist);
+            using (new GenericTracer("Trace", id, "Helper.SessionHelper", "", ""))
+            {
+                bool persist = true;
+                var cookie = FormsAuthentication.GetAuthCookie("usuario", persist);
 
-            cookie.Name = FormsAuthentication.FormsCookieName;
-            cookie.Expires = DateTime.Now.AddMonths(3);
+                cookie.Name = FormsAuthentication.FormsCookieName;
+                cookie.Expires = DateTime.Now.AddMonths(3);
 
-            var ticket = FormsAuthentication.Decrypt(cookie.Value);
-            var newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, id);
+                var ticket = FormsAuthentication.Decrypt(cookie.Value);
+                var newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, id);
 
-            cookie.Value = FormsAuthentication.Encrypt(newTicket);
-            HttpContext.Current.Response.Cookies.Add(cookie);
+                cookie.Value = FormsAuthentication.Encrypt(newTicket);
+                HttpContext.Current.Response.Cookies.Add(cookie);
+            }
         }
     }
 }

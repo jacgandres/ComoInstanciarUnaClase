@@ -10,4 +10,3 @@ C:\Desarrollos\MotorReservas\MotorReserva.Entidad\bin\Debug\MotorReserva.Entidad
 C:\Desarrollos\MotorReservas\MotorReserva.Entidad\bin\Debug\MotorReserva.Entidad.pdb
 C:\Desarrollos\MotorReservas\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.dll
 C:\Desarrollos\MotorReservas\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.pdb
-C:\Desarrollos\MotorReservas\MotorReserva.Entidad\obj\Debug\MotorReserva.Entidad.csprojResolveAssemblyReference.cache

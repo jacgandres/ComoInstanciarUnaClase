@@ -34,5 +34,26 @@ C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReserva.Entidad.pdb
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.dll
 C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.pdb
+<<<<<<< HEAD
 C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\MotorReserva.Entidad.dll
 C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\MotorReserva.Entidad.pdb
+=======
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.Caching.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.CustomLogging.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.GenericCustomLog.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Newtonsoft.Json.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.Caching.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.CustomLogging.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.GenericCustomLog.pdb
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\Newtonsoft.Json.xml
+>>>>>>> .
