@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <title>Motor Reservas</title>
+</head>
+<body>
+    <iframe src="Views/Login/Index.cshtml" ></iframe>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js "></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            var iframe = $("#idFrame1");
+            iframe.attr("width", screen.availWidth);
+            iframe.attr("height", screen.availHeight);
+            alert(screen.availWidth + ":" + screen.availHeight);
+        });
+    </script>
+</body>
+</html>

@@ -109,6 +109,12 @@
   <wsdl:message name="IAdministracion_EliminarRolUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:EliminarRolUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdministracion_VerificarRolTieneModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarRolTieneModulo" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_VerificarRolTieneModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarRolTieneModuloResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdministracion_EliminarModuloRolPorId_InputMessage">
     <wsdl:part name="parameters" element="tns:EliminarModuloRolPorId" />
   </wsdl:message>
@@ -127,11 +133,35 @@
   <wsdl:message name="IAdministracion_ObtenerModulos_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerModulosResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdministracion_Insertar_InputMessage">
-    <wsdl:part name="parameters" element="tns:Insertar" />
+  <wsdl:message name="IAdministracion_EliminarModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModulo" />
   </wsdl:message>
-  <wsdl:message name="IAdministracion_Insertar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  <wsdl:message name="IAdministracion_EliminarModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarModulo" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModulo" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModuloPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModuloPorId" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ObtenerModuloPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModuloPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_RegistrarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpresaResponse" />
   </wsdl:message>
   <wsdl:message name="IAdministracion_EliminarEmpresa_InputMessage">
     <wsdl:part name="parameters" element="tns:EliminarEmpresa" />
@@ -150,6 +180,12 @@
   </wsdl:message>
   <wsdl:message name="IAdministracion_ObtenerEmpresas_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IAdministracion_ActualizarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpresaResponse" />
   </wsdl:message>
   <wsdl:portType name="IAdministracion">
     <wsdl:operation name="RegistrarUsuario">
@@ -220,6 +256,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarRolUsuario" message="tns:IAdministracion_EliminarRolUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarRolUsuarioResponse" message="tns:IAdministracion_EliminarRolUsuario_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="VerificarRolTieneModulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/VerificarRolTieneModulo" message="tns:IAdministracion_VerificarRolTieneModulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/VerificarRolTieneModuloResponse" message="tns:IAdministracion_VerificarRolTieneModulo_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="EliminarModuloRolPorId">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarModuloRolPorId" message="tns:IAdministracion_EliminarModuloRolPorId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarModuloRolPorIdResponse" message="tns:IAdministracion_EliminarModuloRolPorId_OutputMessage" />
@@ -232,9 +272,25 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulos" message="tns:IAdministracion_ObtenerModulos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModulosResponse" message="tns:IAdministracion_ObtenerModulos_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Insertar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/Insertar" message="tns:IAdministracion_Insertar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/InsertarResponse" message="tns:IAdministracion_Insertar_OutputMessage" />
+    <wsdl:operation name="EliminarModulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarModulo" message="tns:IAdministracion_EliminarModulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/EliminarModuloResponse" message="tns:IAdministracion_EliminarModulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarModulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarModulo" message="tns:IAdministracion_RegistrarModulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/RegistrarModuloResponse" message="tns:IAdministracion_RegistrarModulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ActualizarModulo" message="tns:IAdministracion_ActualizarModulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ActualizarModuloResponse" message="tns:IAdministracion_ActualizarModulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModuloPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModuloPorId" message="tns:IAdministracion_ObtenerModuloPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerModuloPorIdResponse" message="tns:IAdministracion_ObtenerModuloPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/RegistrarEmpresa" message="tns:IAdministracion_RegistrarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/RegistrarEmpresaResponse" message="tns:IAdministracion_RegistrarEmpresa_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="EliminarEmpresa">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/EliminarEmpresa" message="tns:IAdministracion_EliminarEmpresa_InputMessage" />
@@ -247,6 +303,10 @@
     <wsdl:operation name="ObtenerEmpresas">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresas" message="tns:IAdministracion_ObtenerEmpresas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ObtenerEmpresasResponse" message="tns:IAdministracion_ObtenerEmpresas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministracion/ActualizarEmpresa" message="tns:IAdministracion_ActualizarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministracion/ActualizarEmpresaResponse" message="tns:IAdministracion_ActualizarEmpresa_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Administracion" type="tns:IAdministracion">
@@ -404,6 +464,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="VerificarRolTieneModulo">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/VerificarRolTieneModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="EliminarModuloRolPorId">
       <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarModuloRolPorId" style="document" />
       <wsdl:input>
@@ -431,8 +500,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Insertar">
-      <soap:operation soapAction="http://tempuri.org/IAdministracion/Insertar" style="document" />
+    <wsdl:operation name="EliminarModulo">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/EliminarModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarModulo">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/RegistrarModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModulo">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ActualizarModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModuloPorId">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerModuloPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/RegistrarEmpresa" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -460,6 +565,15 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerEmpresas">
       <soap:operation soapAction="http://tempuri.org/IAdministracion/ObtenerEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IAdministracion/ActualizarEmpresa" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

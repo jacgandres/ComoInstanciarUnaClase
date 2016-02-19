@@ -12,6 +12,7 @@ namespace MotorReservas.ModeloAdministrativo
         }
 
         public DbSet<CanalVenta> CanalVenta { get; set; }
+        public DbSet<CanalVenta_Tiene_Empresa> CanalVenta_Tiene_Empresa { get; set; }
         public DbSet<Ciudad> Ciudad { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Contrato> Contrato { get; set; }

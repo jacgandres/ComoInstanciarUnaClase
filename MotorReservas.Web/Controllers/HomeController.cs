@@ -8,25 +8,21 @@ using MotorReservas.Web.ConstumeAttributes;
 namespace MotorReservas.Web.Controllers
 {
     [IfNotLoggedActionAttribute]
+    [IsAuthorizated]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            if (Session["NoAutorizado"] != null && (bool)Session["NoAutorizado"] == true)
+            {
+                Session.Remove("NoAutorizado");
+                ViewBag.NoAutorizado = true;
+            }
+            else
+                ViewBag.NoAutorizado = false;
 
             return View();
         }
+
     }
 }

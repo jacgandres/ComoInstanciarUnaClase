@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanalVenta.cs" />
+    <Compile Include="CanalVenta_Tiene_Empresa.cs" />
     <Compile Include="Ciudad.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Contrato.cs" />

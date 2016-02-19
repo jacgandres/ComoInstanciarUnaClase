@@ -36,6 +36,11 @@ namespace MotorReservas.Entidad
         [StringLength(100)]
         [DataMemberAttribute]
         public string Descripcion { get; set; }
+         
+        [StringLength(50)]
+        [DataMemberAttribute]
+        [Required]
+        public string Controlador { get; set; }
 
     }
 }

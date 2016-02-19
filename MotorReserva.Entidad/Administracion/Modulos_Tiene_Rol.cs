@@ -21,6 +21,7 @@ namespace MotorReservas.Entidad
         public int IdRol { get; set; }
 
         [DataMemberAttribute]
+        [Display(Name = "Nombre Modulo")]
         public int IdModulo { get; set; }
 
         [DataMemberAttribute]

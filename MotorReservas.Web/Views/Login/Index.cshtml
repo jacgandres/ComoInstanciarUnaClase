@@ -15,7 +15,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <link href="~/Scripts/Tools/css/style.css" rel="stylesheet" /> 
+    <link href="~/Scripts/Tools/css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/Content/Imgs/kbackgammon-motor-icono-4231-48.ico">
 
     <script src="~/Scripts/jquery.validate.min.js"></script>
@@ -33,34 +33,41 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <h1 style="text-decoration-color:white">Modulo de Inicio</h1>
     </div>
-
-    <div class="container body-content">
-        <hr />
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12">
-                <h2>Ingresar</h2>
-                @using (Html.BeginForm("Acceder", "Login", FormMethod.Post))
-                {
-                    <div class="form-group"></div>
-                    <label>Correo</label>
-                    @Html.ValidationMessageFor(model => model.Correo)
-                    @Html.TextBoxFor(model => model.Correo, new { @class = "form-control", placeholder = "Ingrese su correo", maxlength = 50 })
-
-                    <div class="form-group"></div>
-                    <label>Clave</label>
-                    @Html.ValidationMessageFor(model => model.Clave)
-                    @Html.PasswordFor(model => model.Clave, new { @class = "form-control", placeholder = "Ingrese su clave", maxlength = 10 })
-
-                    <br />
-                    <button type="submit" class="btn btn-default" data-ajax="true">Ingresar</button>
-                }
+    <div class="container">
+        @using (Html.BeginForm("Acceder", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <div class="form-group">
+                <h2>Ingresar <small>Formulario de Login</small> </h2>
             </div>
-        </div>
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Motor de Reservas</p>
-        </footer>
+            <div class="form-group">
+                <div class="input-group">
+                    <label class="sr-only" for="Correo">Correo</label>
+                    <div class="input-group-addon">@@</div>
+                    @Html.ValidationMessageFor(model => model.Correo, string.Empty, new { @class = "form-control-static", @style = "color:red " })
+                    @Html.TextBoxFor(model => model.Correo, new { @class = "form-control", placeholder = "Ingrese su correo", maxlength = 50 })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label class="sr-only" for="Clave">Clave</label>
+                    @Html.ValidationMessageFor(model => model.Clave, string.Empty, new { @class = "form-control-static", @style = "color:red" })
+                    @Html.PasswordFor(model => model.Clave, new { @class = "form-control", placeholder = "Ingrese su clave", maxlength = 10 })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <button type="submit" class="btn btn-primary" data-ajax="true">Ingresar</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <footer>
+                        <p>&copy; @DateTime.Now.ToLongDateString()   - Motor de Reservas</p>
+                    </footer>
+                </div>
+            </div>
+        }
     </div>
 </body>
 </html>

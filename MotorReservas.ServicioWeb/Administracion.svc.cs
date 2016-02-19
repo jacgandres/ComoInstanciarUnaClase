@@ -12,7 +12,7 @@ namespace MotorReservas.ServicioWeb
 {
     public partial class Administracion : IAdministracion
     {
-        #region Administracion de Usuarios
+        #region Seccion Administrativa
 
         #region Seccion de servicios de usuarios
 
@@ -23,9 +23,9 @@ namespace MotorReservas.ServicioWeb
 
         public List<Usuario> ListarUsuarios()
         {
-           return UsuarioModelo.ListarUsuarios();
+            return UsuarioModelo.ListarUsuarios();
         }
-        
+
         public bool ActualizarUsuario(Usuario pUsuario)
         {
             return UsuarioModelo.ActualizarUsuario(pUsuario);
@@ -60,6 +60,25 @@ namespace MotorReservas.ServicioWeb
             return ModuloModelo.ObtenerModulos();
         }
 
+        public bool EliminarModulo(Modulo pModulo)
+        {
+            return ModuloModelo.EmiminarModulo(pModulo);
+        }
+
+        public bool RegistrarModulo(Modulo pModulo)
+        {
+            return ModuloModelo.RegistrarModulo(pModulo);
+        }
+
+        public bool ActualizarModulo(Modulo pModulo)
+        {
+            return ModuloModelo.ActualizarModulo(pModulo);
+        }
+
+        public Modulo ObtenerModuloPorId(Modulo pModulo)
+        {
+            return ModuloModelo.ObtenerModuloPorId(pModulo);
+        }
         #endregion
 
         #region Seccion de servicios de Rol
@@ -99,7 +118,7 @@ namespace MotorReservas.ServicioWeb
         #region Seccion de servicios de Usuarios_Tiene_Rol
         public bool VerificarUsuarioTieneRol(Usuario_Tiene_Rol pUsuarioRol)
         {
-           return Usuario_Tiene_RolModelo.VerificarUsuarioTieneRol(pUsuarioRol);
+            return Usuario_Tiene_RolModelo.VerificarUsuarioTieneRol(pUsuarioRol);
         }
 
         public bool IngresarRolUsuario(Usuario_Tiene_Rol pUsuarioRol)
@@ -116,6 +135,11 @@ namespace MotorReservas.ServicioWeb
 
         #region seccion de servicios de Modulo_Tiene_Rol
 
+        public bool VerificarRolTieneModulo(Modulos_Tiene_Rol pModuloRol)
+        {
+            return Modulo_Tiene_RolModelo.VerificarRolTieneModulo(pModuloRol);
+        }
+
         public bool EliminarModuloRolPorId(Modulos_Tiene_Rol pModuloRol)
         {
             return Modulo_Tiene_RolModelo.EliminarModuloRolPorId(pModuloRol);
@@ -129,14 +153,14 @@ namespace MotorReservas.ServicioWeb
 
         #endregion
 
-        #region Administracion de Empresas       
+        #region Administracion de Empresas
 
-        public bool Insertar(Empresa pEmpresa)
+        public bool RegistrarEmpresa(Empresa pEmpresa)
         {
             return EmpresaModelo.Insertar(pEmpresa);
         }
 
-        public bool EliminarEmpresa (Empresa pEmpresa)
+        public bool EliminarEmpresa(Empresa pEmpresa)
         {
             return EmpresaModelo.EliminarEmpresa(pEmpresa);
         }
@@ -151,6 +175,10 @@ namespace MotorReservas.ServicioWeb
             return EmpresaModelo.ObtenerEmpresas();
         }
 
+        public bool ActualizarEmpresa(Empresa pEmpresa)
+        {
+            return EmpresaModelo.ActualizarEmpresa(pEmpresa);
+        }
         #endregion
     }
 }

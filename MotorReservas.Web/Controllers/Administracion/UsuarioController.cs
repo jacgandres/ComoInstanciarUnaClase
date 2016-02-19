@@ -11,6 +11,7 @@ using MotorReservas.Web.ConstumeAttributes;
 namespace MotorReservas.Web.Controllers.Administracion
 {
     [IfNotLoggedActionAttribute]
+    [IsAuthorizated]
     public class UsuarioController : Controller
     {
         // GET: Usuario
@@ -29,7 +30,7 @@ namespace MotorReservas.Web.Controllers.Administracion
         public ActionResult Logout()
         {
             SessionHelper.DestroyUserSession();
-            Session.Remove("Roles");
+            Session.RemoveAll();
             return Redirect("~");
         }
 
@@ -60,27 +61,38 @@ namespace MotorReservas.Web.Controllers.Administracion
         [OnlyAjaxRequestAttribute]
         public JsonResult CreateUser(Usuario pUser, HttpPostedFileBase file = null)
         {
+            if (string.IsNullOrEmpty(pUser.Clave) == true)
+                ModelState.Remove("Clave");
+            else
+                pUser.Clave = Helper.HashHelper.MD5(pUser.Clave);
+
             pUser.FechaRegistro = DateTime.Now;
             pUser.FechaUltimaSesion = DateTime.Now;
             if (ModelState.IsValid == true)
             {
-                using (AdministracionService.AdministracionClient servicio = new AdministracionService.AdministracionClient())
+                MotorReservas.Web.Comunication.ServicesClient client = new Comunication.ServicesClient();
+
+                ResponseModel mResponse = new ResponseModel();
+
+                if (file != null)
+                    ProcesarImagenes(pUser, file, mResponse);
+                else
                 {
-                    ResponseModel mResponse = new ResponseModel();
-
-                    if (file != null)
-                        ProcesarImagenes(pUser, file, mResponse);
-
-                    if (servicio.RegistrarUsuario(pUser) == true)
-                    {
-                        mResponse.SetResponse(true);
-                        mResponse.href = "usuario/index";
-
-                        return Json(mResponse);
-                    }
-                    else
-                        return Json(new { Response = false, message = "Ocurrio un error con el registro de Usuario, intente nuevamente" });
+                    pUser.UrlImagen1 = string.IsNullOrEmpty(pUser.UrlImagen1) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen1;
+                    pUser.UrlImagen2 = string.IsNullOrEmpty(pUser.UrlImagen2) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen2;
+                    pUser.UrlImagen3 = string.IsNullOrEmpty(pUser.UrlImagen3) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen3;
                 }
+
+                if (client.RegistrarUsuario(pUser) == true)
+                {
+                    mResponse.SetResponse(true);
+                    mResponse.href = "usuario/index";
+
+                    return Json(mResponse);
+                }
+                else
+                    return Json(new { Response = false, message = "Ocurrio un error con el registro de Usuario, intente nuevamente" });
+
             }
             else
                 return Json(new { Response = false, message = "Ocurrio un error con la validacion del formulario" });
@@ -130,7 +142,12 @@ namespace MotorReservas.Web.Controllers.Administracion
 
                     if (file != null)
                         ProcesarImagenes(pUser, file, mResponse);
-
+                    else
+                    {
+                        pUser.UrlImagen1 = string.IsNullOrEmpty(pUser.UrlImagen1) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen1;
+                        pUser.UrlImagen2 = string.IsNullOrEmpty(pUser.UrlImagen2) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen2;
+                        pUser.UrlImagen3 = string.IsNullOrEmpty(pUser.UrlImagen3) ? "~/Uploads/no-photo.jpg" : pUser.UrlImagen3;
+                    }
 
                     if (servicio.ActualizarUsuario(pUser) == true)
                     {

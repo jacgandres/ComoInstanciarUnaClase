@@ -14,7 +14,7 @@
     <div class="form-horizontal">
         <h4>Rol x Usuario</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "", new { @style = "color:red" })
         @Html.HiddenFor(model => model.IdUsuario)
         @Html.HiddenFor(model => model.Activo)
         @Html.HiddenFor(model => model.FechaRegistro)
@@ -28,8 +28,9 @@
                         listItems.Add(new SelectListItem { Text = rol.Nombre, Value = rol.IdRol.ToString() });
                     }
                 }
-                @Html.DropDownListFor(lstRolesUsuarioTieneRol => lstRolesUsuarioTieneRol.IdRol,
-                                        listItems, "-- Seleccionar Empresa --")
+                @Html.DropDownListFor(lstRolesUsuarioTieneRol1 => lstRolesUsuarioTieneRol1.IdRol,
+                                 listItems, "-- Seleccionar Rol --",
+                              new { @class = "btn btn-default dropdown-toggle" })
                 <input type="hidden" name="IdRol" id="txtIdRol" value="" />
             </div>
         </div>

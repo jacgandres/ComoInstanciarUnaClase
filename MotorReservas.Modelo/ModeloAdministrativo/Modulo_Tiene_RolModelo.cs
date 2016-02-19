@@ -9,6 +9,18 @@ namespace MotorReservas.ModeloAdministrativo
 {
     public class Modulo_Tiene_RolModelo
     {
+        public static bool VerificarRolTieneModulo(Modulos_Tiene_Rol pModuloRol)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                var tieneModuloRol = from ctx in contexto.Modulos_Tiene_Rol
+                                     where ctx.IdModulo == pModuloRol.IdModulo && ctx.IdRol == pModuloRol.IdRol
+                                     select ctx;
+
+                return tieneModuloRol.FirstOrDefault() == null;
+            }
+        }
+
         public static bool EliminarModuloRolPorId(Modulos_Tiene_Rol pModuloRol)
         {
             using (MotorReservasContexto ctx = new MotorReservasContexto())

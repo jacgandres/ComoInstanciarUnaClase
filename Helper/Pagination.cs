@@ -1,15 +1,4 @@
-﻿// ********************************************************************
-// Document     : Pagination.cs
-// Version      : 1.0
-// Category     : Libraries
-// Description  : This is a pagination class for creating different types 
-//                of page links.
-// Author       : Mohammad Jahedur Rahman
-// Date         : 08/03/2008
-// Copyright    : Copyright (c) Valentica. All rights reserved.
-// ********************************************************************
-
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;

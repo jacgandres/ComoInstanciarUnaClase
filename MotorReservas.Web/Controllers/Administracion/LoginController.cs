@@ -52,7 +52,7 @@ namespace MotorReservas.Web.Controllers.Administracion
 
                             List<Modulo> modulos = servicio.ObtenerModulosRolPorUsuario(pUsuario);
 
-                            Session["Roles"] = modulos;
+                            Session["modulos"] = modulos;
 
                         }
                     }
@@ -85,5 +85,6 @@ namespace MotorReservas.Web.Controllers.Administracion
                     return Json(new { response = false, message = "Ocurrio un error con la validación del Formulario." });
             }
         }
-    }
+    
+	}
 }

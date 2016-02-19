@@ -1,43 +1,7 @@
-C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Debug\Helper.dll
-C:\Desarrollos\Asp.Net MVC Red Social\Helper\bin\Debug\Helper.pdb
-C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
-C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.dll
-C:\Desarrollos\Asp.Net MVC Red Social\Helper\obj\Debug\Helper.pdb
-C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
-C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\obj\Debug\Helper.pdb
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Helper.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Helper.pdb
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Helpers.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Mvc.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Razor.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Helpers.xml
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Mvc.xml
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.Razor.xml
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.xml
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Helper.dll
-C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Helper.pdb
-C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\obj\Debug\Helper.dll
-C:\Desarrollos\MotorReserva1\ComoInstanciarUnaClase\Helper\obj\Debug\Helper.pdb
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Helper.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Helper.pdb
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReserva.Entidad.dll
-C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReserva.Entidad.pdb
-C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
-C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.dll
-C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.pdb
-<<<<<<< HEAD
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\MotorReserva.Entidad.dll
-C:\Users\Jeca\Documents\MotorReserva\Helper\bin\Debug\MotorReserva.Entidad.pdb
-=======
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.Caching.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.CustomLogging.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.GenericCustomLog.dll
@@ -47,6 +11,7 @@ C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibr
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Newtonsoft.Json.dll
+C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReserva.Entidad.pdb
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.Caching.pdb
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.CustomLogging.pdb
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\MotorReservas.GenericCustomLog.pdb
@@ -56,4 +21,6 @@ C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibr
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Desarrollos\MotorReservas\Helper\bin\Debug\Newtonsoft.Json.xml
->>>>>>> .
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.dll
+C:\Desarrollos\MotorReservas\Helper\obj\Debug\Helper.pdb

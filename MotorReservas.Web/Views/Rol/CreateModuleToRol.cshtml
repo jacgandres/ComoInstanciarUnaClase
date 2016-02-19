@@ -13,13 +13,13 @@
     <div class="form-horizontal">
         <h4>Modulos</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "", new { @style = "color:red" })
         @Html.HiddenFor(model => model.IdRol)
         @Html.HiddenFor(model => model.FechaRegistro)
         @Html.HiddenFor(model => model.Activo)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdRol, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdModulo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @{ 
                     List<SelectListItem> listItems = new List<SelectListItem>();
@@ -29,7 +29,8 @@
                     }
                 }
                 @Html.DropDownListFor(lstModulos => lstModulos.IdModulo,
-                                        listItems, "-- Seleccionar Empresa --")
+                                 listItems, "-- Seleccionar Modulo --",
+                              new { @class = "btn btn-default dropdown-toggle" })
                 <input type="hidden" name="IdModulo" id="txtIdModulo" value="" />
             </div>
         </div> 

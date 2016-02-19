@@ -445,7 +445,12 @@ namespace Helper
 
         public static string getNameForFiles(Usuario pUser)
         {
-            string name = (pUser.IdUsuario + "_" + pUser.Nombre + "_" + pUser.Apellido + "_" + pUser.Correo.Replace("@", "").Replace(".", "")).Replace(" ", "");
+            string name = (pUser.IdUsuario + "_" + pUser.Nombre.Replace(" ", "") + "_" + pUser.Apellido.Replace(" ", "") + "_" + pUser.Correo.Replace("@", "").Replace(".", "")).Replace(" ", "");
+            return name;
+        }
+        public static string getNameForFiles(Empresa pEmpresa)
+        {
+            string name = (pEmpresa.IdEmpresa + "_" + pEmpresa.Nombre.Replace(" ", "") + "_" + pEmpresa.Identificacion.Replace(" ", "") + "_" + pEmpresa.Email.Replace("@", "").Replace(".", "")).Replace(" ", "");
             return name;
         }
     }

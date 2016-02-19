@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administracion.svc" />
+    <Content Include="Comun.svc" />
     <Content Include="Inventario.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -74,9 +75,12 @@
     <Compile Include="Administracion.svc.cs">
       <DependentUpon>Administracion.svc</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Administracion.cs" />
-    <Compile Include="IAdministracion.cs" />
-    <Compile Include="IInventario.cs" />
+    <Compile Include="Comun.svc.cs">
+      <DependentUpon>Comun.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\IAdministracion.cs" />
+    <Compile Include="Interfaz\IComun.cs" />
+    <Compile Include="Interfaz\IInventario.cs" />
     <Compile Include="Inventario.svc.cs">
       <DependentUpon>Inventario.svc</DependentUpon>
     </Compile>
@@ -84,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Servicios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

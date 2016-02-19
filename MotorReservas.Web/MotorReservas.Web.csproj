@@ -126,11 +126,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Comunication\ServicesClient.cs" />
     <Compile Include="ConstumeAttributes\CustomAttributes.cs" />
     <Compile Include="Controllers\Administracion\LoginController.cs" />
+    <Compile Include="Controllers\Administracion\ModuloController.cs" />
     <Compile Include="Controllers\Administracion\RolController.cs" />
     <Compile Include="Controllers\Administracion\UsuarioController.cs" />
+    <Compile Include="Controllers\Comun\CiudadController.cs" />
     <Compile Include="Controllers\Comun\ErrorController.cs" />
+    <Compile Include="Controllers\Comun\TipoIdentificacionController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -138,6 +142,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AdministracionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ComunService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -185,19 +194,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Usuario.datasource" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Rol.datasource" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Modulo.datasource" />
     <Content Include="Properties\DataSources\MotorReservas.Entidad.Empresa.datasource" />
+    <Content Include="Properties\DataSources\MotorReservas.Entidad.Ciudad.datasource" />
+    <Content Include="Properties\DataSources\MotorReservas.Entidad.Departamento.datasource" />
+    <Content Include="Properties\DataSources\MotorReservas.Entidad.Pais.datasource" />
+    <Content Include="Properties\DataSources\MotorReservas.Entidad.TipoIdentificacion.datasource" />
     <None Include="Properties\PublishProfiles\ISS_Local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Comun\Ciudad\CiudadOperaciones.js" />
+    <Content Include="Scripts\Comun\Home\Home.js" />
+    <Content Include="Scripts\Comun\TipoIdentificacion\TipoIdentificacion.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.11.3.js" />
-    <Content Include="Scripts\jquery-ui-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -224,7 +241,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\ComunService\Comun.disco" />
+    <None Include="Service References\ComunService\configuration91.svcinfo" />
+    <None Include="Service References\ComunService\configuration.svcinfo" />
+    <None Include="Service References\ComunService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Uploads\20150302234503.jpg" />
+    <Content Include="Uploads\no-photo.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -238,9 +263,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
@@ -266,10 +288,29 @@
     </None>
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Empresa\Index.cshtml" />
+    <Content Include="Views\Rol\Edit.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Empresa\Create.cshtml" />
+    <Content Include="Views\Ciudad\InicioCiudadFormulario.cshtml" />
+    <None Include="Service References\ComunService\Comun.wsdl" />
+    <None Include="Service References\ComunService\Comun.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ComunService\Comun1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ComunService\Comun2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Views\TipoIdentificacion\Index.cshtml" />
+    <Content Include="Views\Empresa\Details.cshtml" />
+    <Content Include="Views\Empresa\Edit.cshtml" />
+    <Content Include="Views\Modulo\Index.cshtml" />
+    <Content Include="Views\Modulo\Create.cshtml" />
+    <Content Include="Views\Modulo\Edit.cshtml" />
+    <Content Include="Views\Modulo\Details.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -304,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AdministracionService\" />
+    <WCFMetadataStorage Include="Service References\ComunService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

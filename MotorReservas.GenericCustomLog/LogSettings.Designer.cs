@@ -25,7 +25,7 @@ namespace MotorReservas.GenericCustomLog {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("persistsecurityinfo=True;server=192.168.1.101;user id=sa;database=MotorReservas; " +
+        [global::System.Configuration.DefaultSettingValueAttribute("persistsecurityinfo=True;server=192.168.1.73;user id=sa;database=MotorReservas; " +
             "password = 1234567890;")]
         public string StringConection {
             get {

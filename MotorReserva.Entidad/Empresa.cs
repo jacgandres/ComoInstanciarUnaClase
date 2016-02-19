@@ -11,20 +11,17 @@ namespace MotorReservas.Entidad
     [DataContractAttribute(Name = "Empresa")]
     [Serializable]
     public class Empresa
-    {
-
-        public Empresa()
-        {
-        }
-
+    {  
         [Key]
         [DataMemberAttribute]
         public int IdEmpresa { get; set; }
 
         [DataMemberAttribute]
-        public int IdPerfil { get; set; }
-
+        [Display(Name = "Tipo Identificación")]
+        public int IdTipoIdentificacion { get; set; }
+        
         [DataMemberAttribute]
+        [Display(Name = "Nombre Ciudad")]
         public int IdCiudad { get; set; }
 
         [Required]
@@ -46,6 +43,7 @@ namespace MotorReservas.Entidad
         [Required]
         [StringLength(100)]
         [DataMemberAttribute]
+        [EmailAddress]
         public string Email { get; set; }
 
         [StringLength(100)]
@@ -60,6 +58,7 @@ namespace MotorReservas.Entidad
 
         [StringLength(100)]
         [DataMemberAttribute]
+        [Display(Name = "Imagen")]
         public string UrlImagen1 { get; set; }
 
         [StringLength(100)]

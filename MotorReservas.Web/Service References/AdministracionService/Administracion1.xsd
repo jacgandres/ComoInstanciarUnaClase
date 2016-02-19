@@ -235,10 +235,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EliminarModuloRolPorId">
+  <xs:element name="VerificarRolTieneModulo">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModuloRol" nillable="true" type="q24:Modulos_Tiene_Rol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarRolTieneModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarRolTieneModuloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarModuloRolPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModuloRol" nillable="true" type="q25:Modulos_Tiene_Rol" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -252,7 +266,7 @@
   <xs:element name="RegistrarModuloRol">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModuloRol" nillable="true" type="q25:Modulos_Tiene_Rol" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModuloRol" nillable="true" type="q26:Modulos_Tiene_Rol" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -271,28 +285,84 @@
   <xs:element name="ObtenerModulosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerModulosResult" nillable="true" type="q26:ArrayOfModulo" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerModulosResult" nillable="true" type="q27:ArrayOfModulo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Insertar">
+  <xs:element name="EliminarModulo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q27:Empresa" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModulo" nillable="true" type="q28:Modulo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertarResponse">
+  <xs:element name="EliminarModuloResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertarResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="EliminarModuloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModulo" nillable="true" type="q29:Modulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarModuloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModulo" nillable="true" type="q30:Modulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarModuloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerModuloPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pModulo" nillable="true" type="q31:Modulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerModuloPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerModuloPorIdResult" nillable="true" type="q32:Modulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q33:Empresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarEmpresaResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EliminarEmpresa">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q28:Empresa" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q34:Empresa" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -306,14 +376,14 @@
   <xs:element name="ObtenerEmpresaPorId">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q29:Empresa" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q35:Empresa" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ObtenerEmpresaPorIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerEmpresaPorIdResult" nillable="true" type="q30:Empresa" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerEmpresaPorIdResult" nillable="true" type="q36:Empresa" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -325,7 +395,21 @@
   <xs:element name="ObtenerEmpresasResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerEmpresasResult" nillable="true" type="q31:ArrayOfEmpresa" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="ObtenerEmpresasResult" nillable="true" type="q37:ArrayOfEmpresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/MotorReservas.Entidad" minOccurs="0" name="pEmpresa" nillable="true" type="q38:Empresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarEmpresaResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

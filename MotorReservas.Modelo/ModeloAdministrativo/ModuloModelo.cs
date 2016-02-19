@@ -52,5 +52,46 @@ namespace MotorReservas.ModeloAdministrativo
 
             }
         }
+
+        public static bool EmiminarModulo(Modulo pModulo)
+        {
+            using(MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                var qrModulo = contexto.Entry(pModulo);
+                qrModulo.State = System.Data.Entity.EntityState.Deleted;
+                return contexto.SaveChanges() > 0;
+            }
+        }
+
+        public static bool RegistrarModulo(Modulo pModulo)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                contexto.Modulo.Add(pModulo);
+                return contexto.SaveChanges() > 0;
+            }
+        }
+
+        public static bool ActualizarModulo(Modulo pModulo)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                var qrModulo = contexto.Entry(pModulo);
+                qrModulo.State = System.Data.Entity.EntityState.Modified;
+                return contexto.SaveChanges() > 0;
+            }
+        }
+
+        public static Modulo ObtenerModuloPorId(Modulo pModulo)
+        {
+            using (MotorReservasContexto contexto = new MotorReservasContexto())
+            {
+                Modulo qrModulo = (from ctx in contexto.Modulo
+                                where ctx.IdModulo == pModulo.IdModulo
+                                select ctx).FirstOrDefault();
+
+                return qrModulo;
+            }
+        }
     }
 }

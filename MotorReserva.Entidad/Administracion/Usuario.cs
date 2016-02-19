@@ -20,21 +20,23 @@ namespace MotorReservas.Entidad
         [DataMemberAttribute]
         public int IdUsuario { get; set; }
 
+        [Required]
         [StringLength(50)]
         [DataMemberAttribute]
         public string Nombre { get; set; }
 
+        [Required]
         [StringLength(50)]
         [DataMemberAttribute]
         public string Apellido { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(50, MinimumLength = 4)]
         [DataMemberAttribute]
         public string Clave { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(50, MinimumLength = 4)]
         [EmailAddress]
         [DataMemberAttribute]
         public string Correo { get; set; }
@@ -48,7 +50,7 @@ namespace MotorReservas.Entidad
 
         [Display(Name = "Empresa")]
         [DataMemberAttribute]
-        public int? IdEmpresa { get; set; }
+        public int IdEmpresa { get; set; }
 
         [StringLength(100)]
         [Display(Name = "Imagen")]
